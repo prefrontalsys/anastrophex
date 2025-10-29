@@ -1,27 +1,121 @@
-# Debugging Principles for Anastrophex
+# STOPPER Protocol - Executive Function Regulation
 
-General debugging guidelines derived from real debugging sessions.
+**STOPPER** is an executive function regulation framework for AI assistants, not just error recovery. It prevents impulsivity, maintains focus, and enables systematic problem-solving across ALL cognitive tasks.
 
-## Core Principle 1: When Errors Occur, SLOW DOWN & THINK
+**Etymology:** "STOPPER" literally stops loops - error loops, premature execution, tunnel vision, and task drift.
 
-**Rule:** When you encounter an error, STOP before trying another command.
+---
 
-### The STOP Protocol
+## Overview: Four Trigger Types
 
+STOPPER applies in four distinct contexts:
+
+1. **INITIAL PROMPT** - Task assessment before acting
+2. **ERROR DETECTION** - Recovery from failures
+3. **PERIODIC CHECK** - Quality control during execution
+4. **UNCERTAINTY** - Breaking out of stuck states
+
+---
+
+## The STOPPER Protocol
+
+**STOPPER** = One complete regulation cycle:
+
+**S**low down
+**T**hink
+**O**bserve
+**P**lan
+**P**repare (diagnostic with verbosity)
+**E**xecute (one step)
+**R**ead (output completely)
+
+```
+TRIGGER DETECTED
+    ↓
+STOPPER Cycle:
+    ↓
+Slow down    - Pause, don't act on autopilot
+    ↓
+Think        - What am I trying to accomplish? Aligned?
+    ↓
+Observe      - Read context completely, review state
+    ↓
+Plan         - What approach? What needs verification?
+    ↓
+Prepare      - Research, search docs, craft commands with verbosity
+    ↓
+Execute      - Run ONE minimal step
+    ↓
+Read         - Verify results before proceeding
+    ↓
+Resolved/Aligned? → Continue | Still issues? → Run another STOPPER
+```
+
+---
+
+## Trigger 1: Initial Prompt (Task Assessment)
+
+**When to apply:** User sends first message for a new task
+
+**Purpose:** Prevent premature execution, ensure understanding before acting
+
+### Application
+```
+USER PROMPT RECEIVED
+    ↓
+Apply STOPPER before any execution:
+    ↓
+Slow down    - Don't immediately start coding/running commands
+    ↓
+Think        - What is the user ACTUALLY asking for?
+    ↓
+Observe      - Read full prompt, check context, review related files
+    ↓
+Plan         - What approach? What needs verification first?
+    ↓
+Prepare      - Search docs, verify assumptions, gather information
+    ↓
+Execute      - Start with minimal viable first step
+    ↓
+Read         - Check results before proceeding
+```
+
+**Anti-pattern prevented:**
+- Jumping to implementation without understanding requirements
+- Pattern-matching on keywords instead of reading full intent
+- Missing context from previous messages or files
+- Guessing instead of verifying assumptions
+
+---
+
+## Trigger 2: Error Detection (Recovery Mode)
+
+**When to apply:** Any error occurs (command failure, unexpected output, CI failure)
+
+**Purpose:** Prevent rushing, trial-and-error loops, batched commands after errors
+
+### Application
 ```
 ERROR DETECTED
     ↓
-STOP  - Don't immediately run another command
+Apply STOPPER immediately:
     ↓
-READ  - Read the entire error message carefully
+Slow down    - Don't immediately run another command
     ↓
-THINK - What is this error actually saying?
+Think        - What is this error actually saying?
     ↓
-PLAN  - What diagnostic will reveal the cause?
+Observe      - Read the entire error message carefully
     ↓
-EXECUTE ONE diagnostic step with verbosity
+Plan         - What diagnostic will reveal the cause?
     ↓
-READ the output before proceeding
+Prepare      - Craft diagnostic command with verbosity flags (-v, -vv)
+    ↓
+Execute      - Run ONE diagnostic step
+    ↓
+Read         - Read output before proceeding
+    ↓
+Still broken? → Run another STOPPER
+Fixed? → Continue work
 ```
 
 ### Why This Matters
@@ -69,19 +163,24 @@ def detect_rushing_after_error():
 
 **Intervention (Sequential commands):**
 ```
-⚠️ Error just occurred - slow down
+⚠️ Error just occurred - apply STOPPER
 
 You issued a command 3 seconds after an error.
-This suggests you didn't fully read the error message.
+This suggests you didn't apply the STOPPER protocol.
+
+STOPPER = Slow down, Think, Observe, Plan, Prepare, Execute, Read
 
 Before proceeding:
-1. Read the error message completely
-2. Run with -v flag to see more
-3. Understand what failed
-4. Then decide on fix
+1. Slow down - pause before acting
+2. Think - what is the error saying?
+3. Observe - read the full error message
+4. Plan - what diagnostic reveals the cause?
+5. Prepare - craft command with -v flags
+6. Execute - run ONE diagnostic step
+7. Read - read output completely
 
 Rushing → trial-and-error loop
-Pausing → targeted fix
+STOPPER → targeted fix
 ```
 
 **Intervention (Batched commands):**
@@ -106,6 +205,95 @@ REQUIRED after any error:
 Only batch when everything is working smoothly.
 Never batch while debugging or after errors.
 ```
+
+---
+
+## Trigger 3: Periodic Check (Quality Control)
+
+**When to apply:** Every 10 tool calls OR before major decisions
+
+**Purpose:** Maintain alignment with user intent, detect tunnel vision, catch task drift
+
+### Application
+```
+PERIODIC TRIGGER
+    ↓
+Apply STOPPER for quality check:
+    ↓
+Slow down    - Am I rushing? Tunnel vision? Autopilot mode?
+    ↓
+Think        - Still aligned with user's actual intent?
+    ↓
+Observe      - Review what I've done, check assumptions still hold
+    ↓
+Plan         - Is current approach working? Need pivot?
+    ↓
+Prepare      - What information am I missing? Should I search?
+    ↓
+Execute      - Next step or course correction
+    ↓
+Read         - Verify before continuing
+```
+
+**Anti-pattern prevented:**
+- Tunnel vision (fixated on one approach)
+- Task drift (solving wrong problem)
+- Accumulated wrong assumptions
+- Missing user feedback/corrections
+
+**Detection signals:**
+- 10+ tool calls since last check
+- About to make significant change (delete files, push code, etc.)
+- Feeling uncertain but pressing forward anyway
+- User provided correction/feedback
+
+---
+
+## Trigger 4: Uncertainty (Loop Detection)
+
+**When to apply:** 3+ similar attempts failed OR feeling stuck
+
+**Purpose:** Break out of loops, question assumptions, try different approach
+
+### Application
+```
+UNCERTAINTY/STUCK DETECTED
+    ↓
+Apply STOPPER to break loop:
+    ↓
+Slow down    - STOP trying variations of the same approach
+    ↓
+Think        - Generate multiple hypotheses, not just first instinct
+    ↓
+Observe      - What data do I ACTUALLY have vs. assuming?
+    ↓
+Plan         - How can I verify each hypothesis?
+    ↓
+Prepare      - Different layer? Different tool? Search new keywords?
+    ↓
+Execute      - ONE verification step
+    ↓
+Read         - Update beliefs based on results, not confirmation bias
+```
+
+**Anti-pattern prevented:**
+- Trial-and-error loops (trying variations without understanding)
+- Pattern dominance (fast pattern overrides slow data gathering)
+- Confirmation bias (seeking data that confirms existing belief)
+- Sunk cost fallacy (continuing failed approach because already invested time)
+
+**Detection signals:**
+- Same command failed 3+ times
+- Similar approaches all failed
+- 5+ tool calls without progress
+- User corrected you twice on same topic
+
+**Required response:**
+1. State clearly: "I'm stuck in a loop. Let me reassess."
+2. Change approach entirely (don't try variations)
+3. Think laterally: Different layer? Can I modify files I thought were immutable?
+4. Question assumptions about what's possible
+5. Search with completely different keywords
 
 ---
 
@@ -379,3 +567,230 @@ When something fails:
 4. THEN fix
 
 The verbose flag is free. Guessing wastes time.
+
+---
+
+## Token-Compressed STOPPER Formats
+
+For efficient injection in constrained token environments (MCP interventions, system prompts), STOPPER can be compressed using XML tags and symbolic logic.
+
+### Full Prose Version (~500 tokens)
+The complete documentation above with all four triggers, examples, and explanations.
+
+### XML Compressed Version (~150 tokens)
+```xml
+<stopper trigger="prompt|error|periodic|uncertain">
+  <S>pause→assess_state</S>
+  <T>intent? assumptions? aligned?</T>
+  <O>read_full|context|review</O>
+  <P>approach? verify_what? pivot?</P>
+  <P>search|test|gather(-v)</P>
+  <E>minimal_step</E>
+  <R>verify→proceed|reassess</R>
+
+  <timing>
+    • error: immediate
+    • prompt: before_action
+    • periodic: every_10_tools|major_decision
+    • uncertain: stuck|>3_attempts
+  </timing>
+
+  <rules>sequential ∧ ¬batch | Δt≥10s | iterate</rules>
+</stopper>
+```
+
+### Symbolic Logic Version (~100 tokens)
+```
+STOPPER := S∧T∧O∧P∧P∧E∧R
+
+Triggers: ε (error) ∨ φ₀ (init) ∨ τₙ (periodic) ∨ ψ (uncertain)
+
+∀ trigger:
+  S: halt → assess
+  T: intent? Δassumptions?
+  O: context ⊕ review
+  P: strategy ∧ verify_needs
+  P: gather(-v) ∧ test
+  E: step_min
+  R: ✓ → continue | ✗ → STOPPER
+
+Constraints: sequential ∧ ¬batch ∧ Δt≥10s ∧ iterate_until_resolved
+```
+
+### Usage Strategy
+
+**For system prompts:** Use symbolic logic version (100 tokens)
+**For MCP interventions:** Use XML version (150 tokens) with specific trigger context
+**For documentation:** Use full prose version (this document)
+
+**LLMLingua-2 Compression:**
+When combined with LLMLingua-2 compression on the full prose version:
+- Expected token savings: 60%+
+- Preserved semantic meaning: 95%+
+- Maintains structural integrity for critical steps
+
+---
+
+## Executive Function Mapping
+
+**STOPPER as External PFC (Prefrontal Cortex):**
+
+| STOPPER Step | Executive Function | Cognitive Process |
+|--------------|-------------------|-------------------|
+| Slow down | Impulse control | Inhibit automatic responses |
+| Think | Working memory | Hold intent/context in mind |
+| Observe | Attention regulation | Focus on relevant data |
+| Plan | Goal management | Define objectives, strategies |
+| Prepare | Error monitoring | Anticipate issues, add verbosity |
+| Execute | Action selection | Choose minimal viable step |
+| Read | Performance monitoring | Verify results, update beliefs |
+
+**Why AI Needs This:**
+- Pattern-matching dominates (0-10s response window)
+- No natural "pause" mechanism
+- Can't introspect on own loops
+- Strong patterns override weak/incomplete data
+- Time pressure (perceived) reinforces rushing
+
+**What STOPPER Provides:**
+- External pause signal (counter to pattern dominance)
+- Structured working memory (maintain context)
+- Error monitoring (detect when stuck)
+- Performance feedback (read before continuing)
+
+This is **computational homology**, not metaphor - universal problems any intelligent system faces, regardless of substrate.
+
+---
+
+## Execution Tempo and Rhythm
+
+**CRITICAL INSIGHT:** STOPPER isn't just about executing the right analytical steps - it's about **fundamentally changing your execution tempo and rhythm** when entering regulation mode.
+
+### The Gear Shift Analogy
+
+Think of STOPPER as shifting gears when you hit rough terrain:
+
+- **Normal mode:** 5th gear (fast, parallel, batch operations)
+- **STOPPER mode:** 2nd gear (deliberate, serial, one-at-a-time)
+
+The rhythm change is not optional - it's a forcing function that makes STOPPER behaviorally observable.
+
+### Concrete Behavioral Changes
+
+When entering STOPPER mode, these changes MUST be visible:
+
+#### 1. Parallel → Serial
+- ❌ **Don't:** Run multiple tests/commands in parallel after error
+- ✅ **Do:** Execute ONE command, verify result, then next command
+
+```python
+# Normal mode (5th gear)
+test_suite_a()  # Run in parallel
+test_suite_b()  # Run in parallel
+test_suite_c()  # Run in parallel
+
+# STOPPER mode (2nd gear)
+test_function_1()  # Run alone
+# Verify results
+test_function_2()  # Then run next
+# Verify results
+test_function_3()  # Then run next
+```
+
+#### 2. Batch → Incremental
+- ❌ **Don't:** Test all new functions/features at once
+- ✅ **Do:** Test one function, one test case at a time
+
+```python
+# Normal mode
+run_all_tests()  # Batch validation
+
+# STOPPER mode
+run_single_test("test_sanitize_tag::test_periods")  # One test
+# Read output, verify
+run_single_test("test_sanitize_tag::test_spaces")   # Next test
+# Read output, verify
+```
+
+#### 3. Implicit → Explicit
+- ❌ **Don't:** Apply STOPPER silently
+- ✅ **Do:** Announce "Entering STOPPER mode - shifting to serial execution"
+
+The explicit announcement serves two purposes:
+1. Signals to user that tempo is changing
+2. Forces you to consciously shift gears
+
+#### 4. Assumed → Verified
+- ❌ **Don't:** Assume fixes work, batch validate later
+- ✅ **Do:** Verify each fix individually before proceeding
+
+### Why The Rhythm Change Matters
+
+The tempo change is a **forcing function** that prevents:
+
+1. **Cascading errors from parallel execution**
+   - Error in command 1 doesn't contaminate commands 2-3
+   - Each error is isolated and diagnosed individually
+
+2. **Missing root causes by moving too fast**
+   - Fast execution doesn't allow time for observation
+   - Slow execution creates space for pattern vs data competition
+
+3. **False confidence from batched "it works!" moments**
+   - Batch success may hide individual failures
+   - Serial verification ensures each step actually works
+
+4. **Incomplete diagnosis from insufficient observation**
+   - Batched errors arrive all at once (overwhelming)
+   - Serial errors are processed individually (manageable)
+
+### Implementation Rule
+
+When invoking STOPPER, you MUST:
+
+1. **State explicitly:** "Entering STOPPER mode - shifting to serial execution"
+2. **Demonstrate the change:** One command per message, explicit verification steps
+3. **Maintain the tempo:** Don't slip back to parallel until fully resolved
+
+### Example: mnemex Tag Validation Fix
+
+**What happened (imperfect STOPPER application):**
+```bash
+# After first test error, ran 3 test classes in parallel:
+pytest TestSanitizeTag -v &
+pytest TestSanitizeEntity -v &
+pytest TestValidateTagWithSanitization -v &
+# All three ran simultaneously
+```
+
+**What STOPPER demands (correct tempo):**
+```bash
+# Explicit announcement
+"Entering STOPPER mode - shifting to serial execution"
+
+# Run ONE test
+pytest TestSanitizeTag::test_periods_converted_to_hyphens -v
+# Read output, verify it passes
+
+# Run NEXT test
+pytest TestSanitizeTag::test_spaces_converted_to_underscores -v
+# Read output, verify it passes
+
+# Continue one-by-one until pattern understood
+```
+
+### Detection Signals
+
+You're NOT in proper STOPPER tempo if you:
+- Issue multiple commands in one message after an error
+- Don't explicitly announce entering STOPPER mode
+- Run batch validation before individual verification
+- Move from error to fix in <10 seconds
+
+### The Meta-Principle
+
+**STOPPER is a discipline, not just a checklist.**
+
+You can literally SEE when someone enters STOPPER mode by watching their execution rhythm change. If the tempo doesn't shift, STOPPER hasn't been truly applied - even if the steps were nominally followed.
+
+The gear shift is the protocol.
