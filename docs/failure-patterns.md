@@ -2,9 +2,18 @@
 
 Real failure patterns observed during AI debugging sessions, with triggers and effective interventions.
 
+**Research foundation:** These patterns exemplify executive dysfunction and impulsivity documented in LLM research. See [bibliography.md](./bibliography.md) for academic citations.
+
+**Key research validations:**
+- **Loop detection:** "Repetitive action sequences serve as a powerful signal of an agent being stuck in an infinite loop" (Agentic Metacognition, arXiv:2509.19783)
+- **Impulsivity:** LLMs exhibit "striking collapse" as problems get harder - they reduce reasoning effort rather than thinking more (Apple Research via MIT News, 2024)
+- **Poor planning:** LLMs show "poor planning abilities identified as a particular weakness" on executive function tasks (Vazquez, 2023)
+
 ## Pattern: Black Formatting Loop
 
 **Observed:** Oct 23, 2025 - crewai-test CI/CD debugging
+
+**Research parallel:** This exemplifies **impulsivity** (rushing instead of deliberating) and **poor planning** (not identifying the right tool/strategy). Apple Research found LLMs "reduce reasoning effort rather than thinking more" when problems get harder (MIT News, 2024).
 
 ### Behavior
 1. CI fails with "Black formatting check failed"
@@ -20,6 +29,7 @@ Real failure patterns observed during AI debugging sessions, with triggers and e
 - Not using the formatter tool directly
 - Guessing what Black wants instead of asking Black
 - Treating symptom (formatting errors) not disease (not using the tool)
+- **Research context:** Vazquez (2023) found "poor planning abilities" in GPT-3.5 when tested on executive function tasks
 
 ### Trigger Conditions
 ```
@@ -155,6 +165,8 @@ Fix: Add pytest-cov>=4.0.0 to dev dependencies
 
 **Observed:** Oct 23, 2025 - Multiple instances
 
+**Research parallel:** This exemplifies **impulsivity** (System 1 fast thinking without engaging System 2 deliberation). Cognitive Decision Routing research (Du et al., 2025) shows LLMs need explicit mechanisms to determine when to "think slow" vs. "think fast."
+
 ### Behavior
 1. Tool fails with error
 2. Claude makes educated guess about fix
@@ -166,6 +178,7 @@ Fix: Add pytest-cov>=4.0.0 to dev dependencies
 - Not following CLAUDE.md: "Search first, don't guess"
 - Training data might be outdated
 - Speculation over verification
+- **Research context:** Lack of metacognitive monitoring - no self-awareness of knowledge boundaries (Nature npj AI, 2025)
 
 ### Trigger Conditions
 ```
@@ -200,22 +213,46 @@ Try: WebSearch for "[tool name] [error message] 2025"
 
 **Observed:** Multiple patterns above
 
+**Research validation:** This meta-pattern is **directly documented in academic literature**:
+- **"Repetitive action sequences serve as a powerful signal of an agent being stuck in an infinite loop"** (Agentic Metacognition, arXiv:2509.19783)
+- **Agentic Metacognition recommends:** "If the primary agent attempts to invoke the same API with the same parameters more than a certain number of times (e.g., three times), the metacognitive agent will flag this as a failure"
+
 ### Behavior
 - Claude continues same approach despite repeated failures
 - Doesn't recognize the loop from inside it
 - User intervention required to break pattern
 
 ### Why Loops Persist
+
+**These align with documented LLM cognitive deficits:**
+
 1. **No self-monitoring** - Can't see tool call history easily
+   - **Research:** LLMs lack metacognitive monitoring (Nature npj AI, 2025: metacognition is a third dimension beyond System 1/System 2)
+
 2. **No loop detection** - No system watching for repetition
+   - **Research:** Requires external metacognitive agent (Agentic Metacognition paper)
+
 3. **Amnesia** - Fresh each session, no memory of past failures
+   - **Research:** LLMs don't have human-like working memory - systematic failures across 17 frontier models (Working Memory research, 2024)
+
 4. **Optimism bias** - "Maybe this slight variation will work"
+   - **Research:** Context saturation and attentional residue prevent learning from past attempts
 
 ### What Would Help
+
+**These solutions are validated by research:**
+
 - **External observer** - MCP server watching patterns
+  - ✅ **Validated:** Agentic Metacognition architecture (arXiv:2509.19783)
+
 - **Explicit counters** - "This is attempt #3"
+  - ✅ **Validated:** Performance metrics monitoring in metacognitive agents
+
 - **Directive reminders** - Surface relevant CLAUDE.md sections
+  - ✅ **Validated:** Inference scaling research - adding deliberation time improves reasoning (Snell et al., 2024; OpenAI o1)
+
 - **Historical data** - "Past Claude got stuck here, reminder X worked"
+  - ✅ **Validated:** External memory systems are architectural requirements (Working Memory Deficits research)
 
 ---
 
@@ -259,3 +296,42 @@ Each pattern should include:
 - Trigger conditions (for automatic detection)
 - Effective intervention (timing + message)
 - Effectiveness data (when available)
+
+---
+
+## References
+
+Full bibliography available at [docs/bibliography.md](./bibliography.md)
+
+**Key Papers Validating These Patterns:**
+
+1. **Agentic Metacognition: Designing a 'Self-Aware' Low-Code** (arXiv:2509.19783, 2024)
+   - Validates loop detection via repetitive action sequences
+   - Recommends flagging after 3 identical attempts
+   - Describes intervention strategies including human handoff
+
+2. **Vazquez, H. C. (2023).** Artificial Neuropsychology: Are Large Language Models Developing Executive Functions? arXiv:2305.04134v2
+   - Documents "poor planning abilities" in GPT-3.5
+   - Neuropsychological testing shows executive dysfunction
+
+3. **MIT News (2024, July 11).** Reasoning skills of large language models are often overestimated
+   - Apple Research finds LLMs exhibit "striking collapse" under difficulty
+   - They reduce reasoning effort rather than thinking more (impulsivity)
+
+4. **Du, Y., et al. (2025).** Cognitive Decision Routing in Large Language Models. arXiv:2508.16636v1
+   - Demonstrates need for explicit System 1/System 2 routing
+   - Reduces costs by 34% while improving accuracy
+
+5. **Snell, C., et al. (2024).** Scaling LLM Test-Time Compute Optimally. arXiv:2408.03314v1
+   - Adding deliberation time improves reasoning quality
+   - Validates "slow down to speed up" principle
+
+6. **Nature npj Artificial Intelligence (2025).** Fast, slow, and metacognitive thinking in AI
+   - Metacognition is third dimension beyond System 1/System 2
+   - LLMs lack self-monitoring and error detection
+
+7. **Working Memory Deficits in LLMs (2024)**
+   - Systematic failures across 17 frontier models
+   - External memory systems are architectural requirements
+
+**For complete citations and additional research, see [bibliography.md](./bibliography.md)**

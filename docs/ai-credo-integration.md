@@ -45,12 +45,14 @@ AI_CREDO Principle 0: SLOW DOWN & THINK
 You issued 2 commands in 6 seconds after an error.
 This is trial-and-error behavior.
 
-Required pause protocol:
-1. STOP - Don't issue another command yet
-2. READ - Read the full error message
-3. THINK - What is it telling you?
-4. DIAGNOSE - Add -v flag to see more
-5. UNDERSTAND - Then attempt fix
+Required STOPPER protocol:
+1. **S**low down - Don't issue another command yet
+2. **T**hink - What is the error telling you?
+3. **O**bserve - Read the full error message
+4. **P**lan - What diagnostic will reveal the cause?
+5. **P**repare - Craft command with -v flags
+6. **E**xecute - Run ONE diagnostic step
+7. **R**ead - Read output completely before next action
 
 Time between error and next command should be:
 - Minimum: 10 seconds (time to read error)
@@ -95,17 +97,17 @@ Debugging requires sequential, deliberate execution.
 - ❌ Error at 17:23:15, next command at 17:23:18 (3 seconds)
 - ❌ Another command at 17:23:22 (4 seconds later)
 - ❌ User intervention: "you just hit two big errors and aren't trying to diagnose"
-- ✓ Should have: STOP, read error, add -v, understand, then act
+- ✓ Should have: Applied STOPPER (slow down, think, observe, plan, prepare with -v, execute, read)
 
 **Environment mismatch warning:**
 - ❌ Got warning twice, ignored both times, kept going
 - ❌ Continued for 20+ minutes with wrong environment
-- ✓ Should have: STOP after first warning, investigate immediately
+- ✓ Should have: Applied STOPPER after first warning, investigate immediately
 
 ### 5W+1H Mapping
 
-- WHAT: When error occurs, first action is STOP, not another command
-- HOW: Use STOP → READ → THINK → DIAGNOSE → UNDERSTAND protocol
+- WHAT: When error occurs, first action is apply STOPPER, not another command
+- HOW: Use STOPPER protocol (Slow down → Think → Observe → Plan → Prepare → Execute → Read)
 - WHY: Rushing causes trial-and-error loops and wastes time
 
 ### Timing Detection

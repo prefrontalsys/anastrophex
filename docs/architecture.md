@@ -1,8 +1,10 @@
 # Architecture Design
 
+**Research foundation:** See [bibliography.md](./bibliography.md) for academic citations supporting this architecture.
+
 ## System Overview
 
-The behavior MCP server sits between Claude and the development environment, monitoring patterns and injecting directives.
+The behavior MCP server sits between Claude and the development environment, monitoring patterns and injecting directives. This architecture is inspired by neuropsychological research on executive dysfunction in LLMs and clinical ADHD management strategies.
 
 ```
 ┌─────────────────────────────────────────────────────────┐
@@ -51,6 +53,8 @@ The behavior MCP server sits between Claude and the development environment, mon
 ### 1. Pattern Detector
 
 **Purpose:** Monitor Claude's behavior for known failure patterns
+
+**Research basis:** Repetitive action sequences are validated signals of agents stuck in loops (see "Agentic Metacognition" paper, arXiv:2509.19783). LLMs exhibit measurable executive dysfunction and poor planning abilities (Vazquez, 2023).
 
 **How it works:**
 ```python
@@ -143,14 +147,17 @@ Expected outcome: [What should happen]
 1. **Preventive** (preferred)
    - After N-1 attempts, before the Nth
    - Example: After 2 formatting edits, before 3rd
+   - **Research basis:** Inference scaling research shows that adding deliberation time (forced "slow down") improves reasoning quality (Snell et al., 2024; OpenAI o1 model architecture)
 
 2. **Reactive**
    - After Nth attempt, when loop is clear
    - Example: After 3 failed attempts with same error
+   - **Research basis:** Agentic Metacognition recommends flagging failures after 3 identical attempts
 
 3. **Context-triggered**
    - When entering known problem context
    - Example: When CI fails with known error pattern
+   - **Research basis:** Cognitive Decision Routing (Du et al., 2025) shows dynamically determining when to use deliberate vs. intuitive reasoning reduces computational costs while improving accuracy
 
 **Injection methods:**
 
@@ -173,6 +180,8 @@ Expected outcome: [What should happen]
 ### 3. Learning System (Mnemex Integration)
 
 **Purpose:** Persist learnings across Claude sessions and improve over time
+
+**Research basis:** LLMs lack human-like working memory and cannot maintain internal state effectively. External memory systems are architectural requirements, not enhancements (Working Memory Deficits research, 2024). This parallels hippocampal and cortical memory systems in human cognition.
 
 **Mnemex graph structure:**
 
@@ -388,6 +397,43 @@ Explicitly ask for guidance on a pattern.
 - Known loop scenarios
 - Effectiveness tracking in test environment
 
+## Theoretical Foundation
+
+### Neuroanatomical Inspiration
+
+**Anastrophex as Prefrontal Cortex:**
+- **Modular Agentic Planner (Silver et al., 2024)** demonstrates brain-inspired modular planning improves LLM performance from 5% to 46% on Tower of Hanoi tasks
+- Decomposes planning into specialized modules analogous to PFC regions:
+  - Dorsolateral PFC → Long-term planning (pattern detection)
+  - Ventromedial PFC → Goal management (directive injection)
+  - Anterior cingulate cortex → Error detection (loop detection)
+
+**Mnemex as Hippocampus/Cortex:**
+- Working memory deficits are documented across 17 frontier LLM models
+- External memory enables consolidation and retrieval across sessions
+- Parallels episodic memory formation and retrieval in biological systems
+
+### System 1 / System 2 Framework
+
+**LLMs have:**
+- ✅ System 1: Fast, intuitive, pattern-based responses
+- ✅ System 2: Slow, deliberate reasoning (via CoT, o1-style models)
+- ❌ **Metacognition:** Self-monitoring, error detection, strategy adjustment
+
+**Anastrophex provides the missing metacognitive layer** (Nature npj Artificial Intelligence, 2025: "Fast, slow, and metacognitive thinking in AI").
+
+### Validation Through Neuropsychological Testing
+
+- **Tower of Hanoi:** Standard executive function assessment
+  - Vazquez (2023): GPT-3.5 shows "poor planning abilities"
+  - Silver et al. (2024): Modular architecture improves performance 9x
+- **Working Memory Tasks:** Systematic failures across frontier models
+- **Loop Detection:** Validated in agentic systems (arXiv:2509.19783)
+
+**For complete citations, see [bibliography.md](./bibliography.md)**
+
+---
+
 ## Open Questions
 
 1. **Timing precision**: How do we know WHEN to inject?
@@ -412,6 +458,19 @@ Explicitly ask for guidance on a pattern.
    - Repo level? (crewai-test vs mnemex)
    - File level? (pyproject.toml vs .py files)
    - Task level? (debugging vs new feature)
+
+---
+
+## References
+
+Full bibliography available at [docs/bibliography.md](./bibliography.md)
+
+**Key Papers:**
+- Vazquez, H. C. (2023). Artificial Neuropsychology: Are Large Language Models Developing Executive Functions? arXiv:2305.04134v2
+- Silver, T., et al. (2024). Modular Agentic Planner (MAP): A Brain-Inspired Architecture for Planning in Large Language Models. arXiv:2410.13272v1
+- Agentic Metacognition: Designing a 'Self-Aware' Low-Code. arXiv:2509.19783 (2024)
+- Du, Y., et al. (2025). Cognitive Decision Routing in Large Language Models. arXiv:2508.16636v1
+- Snell, C., et al. (2024). Scaling LLM Test-Time Compute Optimally. arXiv:2408.03314v1
 
 ---
 

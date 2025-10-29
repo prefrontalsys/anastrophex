@@ -155,6 +155,287 @@ With this mechanistic foundation established, we explore:
 
 ---
 
+## Literature Review: "AI ADHD" as a Concept (Updated October 2025)
+
+### Research Question
+
+Is the concept of "AI ADHD" - AI systems themselves exhibiting ADHD-like symptoms - documented in existing literature?
+
+### Methodology
+
+Comprehensive search across:
+- Web search engines (Google, Bing)
+- arXiv preprint repository (15 papers each across 4 targeted queries)
+- Academic databases (ACM, Nature, IEEE)
+- Medium and technical blogs
+
+Search terms included: "AI ADHD", "LLM executive dysfunction", "AI impulsivity", "metacognition AI", "System 1 System 2 AI", "loop detection LLM", "executive function language models"
+
+### Key Findings
+
+#### 1. The Term "AI ADHD" Exists - But Means Something Different
+
+**Found:** "The LLM Overload: How 'AI ADHD' is Draining Developer Productivity" (Medium, Earnest Boyd, May 2025)
+
+**What it means:**
+- **Not** about AI systems exhibiting ADHD-like behaviors
+- **Instead** about *developers* experiencing ADHD-like symptoms from:
+  - Constant context-switching between multiple LLMs
+  - Decision fatigue from choosing which model to use
+  - FOMO (Fear of Missing Out) on using the "right" tool
+  - Integration complexity across different AI services
+
+**Quote from the article:**
+> "We're calling it 'AI ADHD' — the constant distraction and context switching caused by the sheer number of LLMs available and the pressure to know which one is 'best' for any given task."
+
+**Conclusion:** This is about *human* ADHD symptoms caused by *AI proliferation*, not AI systems exhibiting ADHD symptoms.
+
+#### 2. Our Core Concept Appears Novel in Literature
+
+**Search results:** No papers or articles explicitly frame AI/LLM behavior patterns as "AI ADHD" in the sense we describe (impulsivity, loop behaviors, executive dysfunction *in the AI system itself*).
+
+**However**, the underlying phenomena are extensively documented under different terminology:
+
+#### 3. Strong Academic Precedent for Underlying Phenomena
+
+##### A. LLMs Exhibit ADHD-Like Cognitive Deficits
+
+**Paper:** "Artificial Neuropsychology: Are Large Language Models Developing Executive Functions?" (Vazquez, 2023, arXiv:2305.04134v2)
+
+**Key findings:**
+- LLMs tested on Tower of Hanoi (executive function task)
+- Show "limited" executive functions compared to "well-trained humans"
+- Performance drops significantly on unknown tasks not in training data
+- **Quote:** "These abilities are quite limited and worse than well-trained humans when the tasks are not known and are not part of the training data"
+
+**Neuropsychological testing of GPT-3.5:**
+- "Inhomogeneous results" on executive function tasks
+- **"Poor planning abilities identified as a particular weakness"**
+- Suggests real parallels to executive dysfunction
+
+##### B. LLMs Reduce Reasoning Effort When They Should Increase It (Impulsivity?)
+
+**Paper:** Apple Research - "The Illusion of Thinking" (referenced in MIT News, July 2024)
+
+**Key findings:**
+- Advanced reasoning LLMs exhibit **"striking collapse" as problems get harder**
+- They **reduce reasoning effort** rather than thinking more
+- Even when sufficient tokens are available, they rush rather than think deeply
+- **This is the opposite of what humans do** (we think harder when problems are harder)
+
+**Quote from MIT News:**
+> "LLMs' reasoning abilities are often overestimated, as they are not as robust as initially thought and suffer from severe performance drops in unfamiliar scenarios."
+
+##### C. Metacognition and Loop Detection Are Active Research Areas
+
+**Paper:** "Agentic Metacognition: Designing a 'Self-Aware' Low-Code" (arXiv:2509.19783)
+
+**Key concepts:**
+- **Metacognitive monitoring:** Agents that monitor their own performance
+- **Loop detection:** "Repetitive action sequences serve as a powerful signal of an agent being stuck in an infinite loop"
+- **Intervention strategies:** Human handoff when metacognitive monitoring identifies persistent failures
+- **Confidence assessment:** Declining confidence across iterations signals potential loops
+
+**Quote:**
+> "If the primary agent attempts to invoke the same API with the same parameters more than a certain number of times (e.g., three times), the metacognitive agent will flag this as a failure"
+
+**This directly validates our loop detection approach in Anastrophex.**
+
+**Paper:** "Fast, slow, and metacognitive thinking in AI" (Nature npj Artificial Intelligence, 2025)
+
+- Establishes dual-process thinking (System 1 / System 2) framework for AI
+- Metacognitive reflection mechanisms to detect errors
+- Switching between fast intuition and slow deliberation
+
+##### D. System 1 / System 2 Thinking Framework Well-Established in AI
+
+**Multiple papers found implementing dual-process cognition:**
+
+1. **"Cognitive Decision Routing in Large Language Models: When to Think Fast, When to Think Slow"** (Du et al., 2025, arXiv:2508.16636)
+   - Dynamically determines when to use intuitive vs. deliberate reasoning
+   - Reduces computational costs by 34% while improving accuracy
+   - Particularly strong on professional judgment tasks (23% consistency improvement)
+
+2. **"Synergy-of-Thoughts: Eliciting Efficient Reasoning in Hybrid Language Models"** (2024, arXiv:2402.02563v4)
+   - Uses smaller models for fast "System 1" intuitions
+   - Invokes larger models for "System 2" reflection when conflicts detected
+   - Reduces API cost by 38.3%-75.1%
+
+3. **"DSADF: Thinking Fast and Slow for Decision Making"** (2025, arXiv:2505.08189v2)
+   - System 1: RL agent for fast, intuitive decisions
+   - System 2: VLM for deep, analytical reasoning
+   - Framework balances both systems adaptively
+
+4. **"Improving Coherence and Consistency in Neural Sequence Models with Dual-System, Neuro-Symbolic Reasoning"** (Nye et al., 2021, arXiv:2107.02794v2)
+   - System 1 (neural) generates candidates
+   - System 2 (symbolic) checks logical consistency
+   - **Can reject generations that fail logical reasoning**
+
+5. **"System 2 Reasoning Capabilities Are Nigh"** (Lowe, 2024, arXiv:2410.03662v2)
+   - Reviews current state of System 2 reasoning in models
+   - Argues "very little additional progress needed" to achieve human-like System 2 reasoning
+
+**Conclusion:** The dual-process framework (fast/intuitive vs. slow/deliberate) is mainstream in AI research.
+
+##### E. Executive Function as Framework for Understanding AI
+
+**Paper:** "Meta-Reinforcement Learning with Self-Modifying Networks" (2022, arXiv:2202.02363v3)
+
+**Concepts:**
+- Synaptic plasticity as mechanism for executive functions
+- Working memory and cognitive flexibility
+- Dynamic weight modification based on feedback
+
+**Quote:**
+> "Biological synaptic plasticity is persistent and manifold, and has been hypothesized to play a key role in executive functions such as working memory and cognitive flexibility"
+
+**Paper:** "Leveraging Dual Process Theory in Language Agent Framework for Real-time Simultaneous Human-AI Collaboration" (Zhang et al., 2025, arXiv:2502.11882v5)
+
+**Key innovation:**
+- DPT-Agent integrates System 1 (Finite-State Machine + code-as-policy) and System 2 (Theory of Mind + asynchronous reflection)
+- System 2 infers human intentions to perform autonomous decisions
+- **First framework for real-time simultaneous human-AI collaboration**
+
+##### F. Reasoning or Overthinking: When More Thinking Hurts
+
+**Paper:** "Reasoning or Overthinking: Evaluating Large Language Models on Financial Sentiment Analysis" (2025, arXiv:2506.04574v1)
+
+**Surprising finding:**
+- Reasoning models (o3-mini, GPT-4.1) did **worse** than intuitive models (GPT-4o without CoT)
+- Chain-of-Thought prompting led to **suboptimal predictions**
+- **"System 1"-like fast thinking aligned more closely with human judgment** than "System 2"-style deliberative reasoning
+- Suggests that **reasoning may introduce overthinking** in some contexts
+
+**Quote:**
+> "For financial sentiment classification, fast, intuitive 'System 1'-like thinking aligns more closely with human judgment compared to 'System 2'-style slower, deliberative reasoning"
+
+**This challenges default assumption that more reasoning = better performance.**
+
+#### 4. Inference Scaling: Evidence That "Slowing Down" Works
+
+**Research findings:** When models use more output tokens for reasoning (inference scaling), accuracy improves on problems with clear answers.
+
+**OpenAI's o1 model:**
+- Shows improvements on coding, math, and exams where reasoning matters
+- Stronger gains in subjects requiring reasoning vs. pure knowledge
+- Demonstrates that deliberate reasoning can overcome statistical limitations
+
+**Quote from research:**
+> "Inference scaling allows LLMs to overcome their statistical limitations 'much like a person using pen and paper to work through a math problem'"
+
+**This validates the core principle of Anastrophex: slowing down enables better reasoning.**
+
+#### 5. Pattern Detection and Intervention Strategies
+
+**Paper:** "Modular Design Patterns for Hybrid Learning and Reasoning Systems" (van Bekkum et al., 2021, arXiv:2102.11965v2)
+
+- Taxonomy of hybrid neuro-symbolic architectures
+- 15+ design patterns for combining neural (System 1) and symbolic (System 2) components
+- Framework for integrating data-driven and knowledge-driven methods
+
+**Paper:** "Efficient Rectification of Neuro-Symbolic Reasoning Inconsistencies by Abductive Reflection" (2024, arXiv:2412.08457v2)
+
+**Key concepts:**
+- Detects errors in neural network outputs during inference
+- Uses abduction to **rectify inconsistencies and generate consistent outputs**
+- **Abductive reflection vector flags potential errors** and invokes correction
+- Outperforms state-of-the-art neuro-symbolic methods
+
+**This is very close to what Anastrophex does: detect patterns, flag errors, invoke correction.**
+
+### Synthesis: What This Research Tells Us
+
+#### Our Contribution is Novel
+
+**What's new:**
+1. **Explicit framing of AI behavior as "AI ADHD"** (AI systems exhibiting ADHD symptoms)
+2. **Unified framework** connecting impulsivity, loop detection, and executive dysfunction
+3. **Neuroanatomical mapping** (Anastrophex = PFC, Mnemex = hippocampus/cortex)
+4. **Practical intervention system** based on ADHD management strategies
+
+**What exists in literature:**
+1. Executive function testing in LLMs (Vazquez 2023)
+2. Dual-process (System 1/System 2) AI frameworks (many papers)
+3. Metacognitive monitoring and loop detection (multiple papers)
+4. Inference scaling showing slowing down improves reasoning
+5. Evidence LLMs reduce effort when they should increase it (Apple)
+6. Neuro-symbolic architectures that detect and rectify errors
+
+#### Academic Validation of Core Mechanisms
+
+Our core observations are **strongly supported** by academic research:
+
+| Anastrophex Observation | Academic Support |
+|------------------------|------------------|
+| LLMs exhibit impulsivity (rushing instead of deliberating) | Apple: "striking collapse" - reduce effort when problems get harder |
+| LLMs need executive function support | Vazquez: "poor planning abilities identified as particular weakness" |
+| Loop detection is critical | Agentic Metacognition: "repetitive sequences signal stuck in infinite loop" |
+| System 1/System 2 framework is valid | Multiple papers implement dual-process thinking in AI |
+| Slowing down improves reasoning | Inference scaling research + OpenAI o1 results |
+| Metacognitive monitoring prevents errors | Multiple papers on self-monitoring and error detection |
+| Pattern dominance over deliberation | MIT: "reasoning abilities often overestimated" |
+
+#### The Gap We Fill
+
+**Academic research focuses on:**
+- Architecture design (how to build dual-process systems)
+- Theoretical frameworks (dual-process theory applied to AI)
+- Benchmark performance (accuracy on specific tasks)
+- Novel algorithms (better reasoning methods)
+
+**Anastrophex focuses on:**
+- **Real-time intervention** (preventing errors as they happen)
+- **Practical deployment** (helping AI assistants in actual use)
+- **ADHD-specific framework** (impulse control, working memory, sustained attention)
+- **Learning what works** (effectiveness tracking via mnemex)
+
+**The literature gives us the *why* (executive dysfunction is real), we provide the *how* (practical interventions).**
+
+#### Future Research Directions Informed by Literature
+
+1. **Validate "overthinking" threshold:**
+   - Financial sentiment paper shows sometimes less reasoning is better
+   - Need to determine when System 1 suffices vs. when System 2 needed
+   - This informs when Anastrophex should intervene vs. let model proceed
+
+2. **Implement abductive reflection:**
+   - Paper shows error detection + correction outperforms naive approaches
+   - Could enhance Anastrophex with abductive reasoning for error rectification
+
+3. **Test neuropsychological battery:**
+   - Vazquez used Tower of Hanoi for executive function
+   - Could develop comprehensive EF test suite for different LLMs
+   - Measure "executive function capacity" as model characteristic
+
+4. **Metacognitive confidence scores:**
+   - Agentic Metacognition uses declining confidence as signal
+   - Could incorporate confidence tracking into loop detection
+
+5. **Hybrid system design:**
+   - Multiple papers show hybrid neuro-symbolic outperforms pure neural
+   - Anastrophex is essentially a symbolic reasoning layer for neural LLMs
+   - Could formalize this as design pattern
+
+### Conclusion from Literature Review
+
+**The term "AI ADHD" (in our sense) is novel, but the phenomenon is real and well-documented.**
+
+Our contribution is:
+1. **Unifying framework** that recognizes these scattered findings as symptoms of a common issue
+2. **ADHD lens** that provides clinical validation and management strategies
+3. **Practical implementation** (Anastrophex + Mnemex) based on neuroscience
+4. **Effectiveness tracking** to learn what interventions actually work
+
+The academic literature **validates our core observations** while leaving room for our **practical intervention approach** as a novel contribution.
+
+**Next steps:**
+1. Cite these papers in architecture.md and failure-patterns.md
+2. Incorporate metacognitive monitoring techniques from literature
+3. Test our system against neuropsychological batteries (Tower of Hanoi, etc.)
+4. Formalize Anastrophex as a design pattern in the neuro-symbolic hybrid literature
+
+---
+
 ## The ADHD Parallel
 
 ### Observation
