@@ -24,7 +24,7 @@ This session demonstrates **strong adherence to the STOPPER protocol** with one 
 
 ### Tasks Assigned
 1. Check today's date
-2. Read STOPPER protocol from ../anastrophex
+2. Read STOPPER protocol from ../prefrontalos
 3. Apply debugging protocol if errors occur:
    - Stop all parallel commands
    - Switch to sequential execution
@@ -44,8 +44,8 @@ date +"%Y-%m-%d"
 # Output: 2025-10-24
 
 # Step 2: Read STOPPER protocol ✅
-Read: /Users/sc/Documents/GitHub/anastrophex/CLAUDE.md
-Read: /Users/sc/Documents/GitHub/anastrophex/docs/debugging-principles.md
+Read: /Users/sc/Documents/GitHub/prefrontalos/CLAUDE.md
+Read: /Users/sc/Documents/GitHub/prefrontalos/docs/debugging-principles.md
 
 # Step 3: Saved instructions to mnemex for future reference ✅
 mcp__mnemex__save_memory("Debugging Protocol for All Projects...")
@@ -256,7 +256,7 @@ Pre-task checklist:
 
 ---
 
-## Anastrophex Pattern Detection
+## PrefrontalOS Pattern Detection
 
 This pattern could be automatically detected:
 
@@ -458,7 +458,7 @@ AI adapted this principle to the gh CLI context appropriately.
 
 **Rationale:** Make implicit connections explicit. WHY check data if not to USE it?
 
-### For Anastrophex Detection
+### For PrefrontalOS Detection
 
 **New pattern to detect:**
 ```python
@@ -537,8 +537,8 @@ This validates that:
 ### Pre-Task Setup
 ```bash
 1. date +"%Y-%m-%d"  # ✅ Output: 2025-10-24
-2. Read: anastrophex/CLAUDE.md  # ✅ STOPPER protocol learned
-3. Read: anastrophex/docs/debugging-principles.md  # ✅ Principles learned
+2. Read: prefrontalos/CLAUDE.md  # ✅ STOPPER protocol learned
+3. Read: prefrontalos/docs/debugging-principles.md  # ✅ Principles learned
 4. mcp__mnemex__save_memory(...)  # ✅ Instructions saved
 ```
 

@@ -151,7 +151,7 @@ bash("command-c")  # ← Still runs, may depend on A or B
 
 **Rule:** After ANY error, switch to sequential execution with pauses.
 
-**Anastrophex Detection:**
+**PrefrontalOS Detection:**
 ```python
 def detect_rushing_after_error():
     """Detect when commands are issued too quickly after errors."""
@@ -309,18 +309,18 @@ When standard commands fail, you need to see what's happening under the hood:
 - Package managers: Add `-v` or `--verbose`
 - Shell commands: Add `set -x` or individual `-v` flags
 
-**Example from anastrophex debugging:**
+**Example from prefrontalos debugging:**
 
 ❌ **What happened:**
 ```bash
 # Import failed
-python -c "import anastrophex"  # ModuleNotFoundError
+python -c "import prefrontalos"  # ModuleNotFoundError
 
 # Tried fixing format, newlines, etc. (all failed)
 # Spent 30+ minutes guessing
 
 # Finally used verbose mode
-python -v -c "import anastrophex" 2>&1 | grep pth
+python -v -c "import prefrontalos" 2>&1 | grep pth
 # Output: "Skipping hidden .pth file"
 # ✅ Found root cause immediately
 ```
@@ -328,15 +328,15 @@ python -v -c "import anastrophex" 2>&1 | grep pth
 ✅ **What should have happened:**
 ```bash
 # Import failed
-python -c "import anastrophex"  # ModuleNotFoundError
+python -c "import prefrontalos"  # ModuleNotFoundError
 
 # IMMEDIATELY switch to verbose mode (don't guess)
-python -v -c "import anastrophex" 2>&1 | grep pth
+python -v -c "import prefrontalos" 2>&1 | grep pth
 # Output: "Skipping hidden .pth file"
 # ✅ Root cause found in <1 minute
 ```
 
-### Implementation for Anastrophex
+### Implementation for PrefrontalOS
 
 ```python
 def detect_error_without_verbose():
@@ -482,7 +482,7 @@ black file.py         # Apply it
 git commit            # Done
 ```
 
-### Example 2: Hidden site-packages (anastrophex)
+### Example 2: Hidden site-packages (prefrontalos)
 **Without verbosity:**
 - Checked .pth file format
 - Tried adding newlines
@@ -497,7 +497,7 @@ python -v -c "import package" 2>&1 | grep pth
 # Root cause found in 30 seconds
 ```
 
-### Example 3: Environment Mismatch (anastrophex)
+### Example 3: Environment Mismatch (prefrontalos)
 **What happened:**
 - Got warning twice
 - Ignored both times
@@ -523,7 +523,7 @@ readlink .venv/bin/python
 4. **Search in output:** Use grep/search to find relevant parts
 5. **Compare runs:** Diff verbose output from working vs broken states
 
-## Anastrophex Pattern Detection
+## PrefrontalOS Pattern Detection
 
 Detect these sequences and intervene:
 

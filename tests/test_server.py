@@ -2,13 +2,13 @@
 
 import pytest
 
-from anastrophex.server import AnastrophexServer
+from prefrontalos.server import PrefrontalOSServer
 
 
 @pytest.fixture
 def server():
     """Create a server instance for testing."""
-    return AnastrophexServer()
+    return PrefrontalOSServer()
 
 
 @pytest.mark.asyncio
@@ -17,9 +17,9 @@ async def test_list_resources(server):
     resources = await server._list_resources()
     assert len(resources) == 3
     uris = [str(r.uri) for r in resources]
-    assert "anastrophex://patterns/all" in uris
-    assert "anastrophex://alerts/active" in uris
-    assert "anastrophex://directives/all" in uris
+    assert "prefrontalos://patterns/all" in uris
+    assert "prefrontalos://alerts/active" in uris
+    assert "prefrontalos://directives/all" in uris
 
 
 @pytest.mark.asyncio
@@ -35,7 +35,7 @@ async def test_list_tools(server):
 @pytest.mark.asyncio
 async def test_read_patterns_resource(server):
     """Test reading patterns resource."""
-    result = await server._read_resource("anastrophex://patterns/all")
+    result = await server._read_resource("prefrontalos://patterns/all")
     assert "black-formatting-loop" in result
     assert "patterns" in result
 

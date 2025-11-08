@@ -227,7 +227,7 @@ brew list package
 - ✗ Using wrong Python/Node/etc. (pyenv vs mise vs system)
 - ✗ Problem is specific to this repo's configuration
 
-### Real Example: Anastrophex venv
+### Real Example: PrefrontalOS venv
 
 ```bash
 # WHERE is Python?
@@ -504,7 +504,7 @@ Why? → Directive not surfaced at the right time
 
 Root Cause: No intervention when loop starts
 Actionable: Detect 2+ manual edits to .py after Black CI failure
-Prevention: Anastrophex pattern detection + intervention
+Prevention: PrefrontalOS pattern detection + intervention
 ```
 
 ### Real Example 3: Mypy 77 Errors
@@ -617,7 +617,7 @@ When stuck on a problem:
 **Mental Model:** [What rule to remember]
 ```
 
-### Anastrophex Integration
+### PrefrontalOS Integration
 
 **When to trigger 5 Whys:**
 ```python
@@ -843,7 +843,7 @@ ls -lO .venv/lib/.../site-packages/
 # → New pattern to record
 ```
 
-### Integration with Anastrophex
+### Integration with PrefrontalOS
 
 **Pattern Detection:**
 - Monitor for WHO issues (permission errors)
@@ -885,7 +885,7 @@ pattern:
 
 ---
 
-## Next Steps for Anastrophex
+## Next Steps for PrefrontalOS
 
 1. **Implement WHO detection** (permission errors)
 2. **Implement WHAT enforcement** (verbosity escalation)

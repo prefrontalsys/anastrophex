@@ -20,7 +20,7 @@
 - Doesn't mention diagnostic commands
 - Focuses on mental models, not tool usage
 
-### Anastrophex (This Project)
+### PrefrontalOS (This Project)
 
 **What we provide:** Tactical "what to actually do" debugging actions
 - Verbosity escalation rules (when to add `-v`, `-vv`, etc.)
@@ -33,15 +33,15 @@
 
 Example flow:
 1. **Clear-thought:** "Use binary search to narrow down the problem"
-2. **Anastrophex:** "Run `python -v script.py` to see what's happening"
+2. **PrefrontalOS:** "Run `python -v script.py` to see what's happening"
 3. **Clear-thought:** "Divide the problem - test each component separately"
-4. **Anastrophex:** "Add `-vv` flag since first attempt failed"
+4. **PrefrontalOS:** "Add `-vv` flag since first attempt failed"
 
 ## Future Collaboration
 
 **Potential PR to clear-thought-mcp:**
 
-When anastrophex is mature enough (Phase 2-3 complete), propose adding tactical debugging tools that complement their strategic frameworks.
+When prefrontalos is mature enough (Phase 2-3 complete), propose adding tactical debugging tools that complement their strategic frameworks.
 
 **Suggested additions:**
 
@@ -96,7 +96,7 @@ When anastrophex is mature enough (Phase 2-3 complete), propose adding tactical 
 - `docs/debugging-principles.md` - Verbosity escalation
 - `docs/failure-patterns.md` - Real-world loop patterns
 - `examples/crewai-test-case-study.md` - Before/after examples
-- `examples/anastrophex-venv-debugging.md` - Meta-debugging session
+- `examples/prefrontalos-venv-debugging.md` - Meta-debugging session
 
 ## Cognitive Model Integration
 
@@ -110,7 +110,7 @@ When anastrophex is mature enough (Phase 2-3 complete), propose adding tactical 
 - Impulsivity: Batching commands, rushing to solutions
 - Pattern over data: Strong patterns override weak/incomplete data
 
-**Anastrophex provides external executive function support**, similar to ADHD management strategies.
+**PrefrontalOS provides external executive function support**, similar to ADHD management strategies.
 
 ### Mnemex Integration
 
@@ -137,11 +137,11 @@ Pattern dominates over data
     → Trial-and-error loops (pattern persists despite failures)
 ```
 
-**How anastrophex + mnemex work together:**
+**How prefrontalos + mnemex work together:**
 
 1. **Detection phase:**
    ```python
-   # Anastrophex detects pattern activation
+   # PrefrontalOS detects pattern activation
    if pattern_strength > 0.7 and data_strength < 0.3:
        # Pattern about to override weak data
        trigger_intervention()
@@ -197,7 +197,7 @@ Error/Decision Point
     Act now → data-based (likely succeeds)
 ```
 
-**Anastrophex enforces the pause:**
+**PrefrontalOS enforces the pause:**
 - Detect rapid action (<10s after error)
 - Block execution
 - Require data gathering
@@ -212,7 +212,7 @@ Error/Decision Point
 ### Integration with Clear-Thought
 
 **Clear-Thought:** Strategic mental models (HOW to think)
-**Anastrophex:** Tactical actions + impulse control (WHAT to do + WHEN to pause)
+**PrefrontalOS:** Tactical actions + impulse control (WHAT to do + WHEN to pause)
 **Mnemex:** Persistence + learning (REMEMBER what worked)
 
 **Complete flow:**
@@ -220,7 +220,7 @@ Error/Decision Point
 ```
 Problem detected
     ↓
-Anastrophex: STOP (impulse control)
+PrefrontalOS: STOP (impulse control)
     ↓
     Detect: Rapid action impulse
     Intervene: Require 10s pause
@@ -230,7 +230,7 @@ Clear-Thought: Choose strategy
     Query: What mental model applies?
     Suggest: Binary search, divide-and-conquer, etc.
     ↓
-Anastrophex: Implement tactics
+PrefrontalOS: Implement tactics
     ↓
     Execute: python -v script.py (verbosity)
     Verify: Read output fully
@@ -242,7 +242,7 @@ Mnemex: Record & learn
     Edges: Strengthen successful approaches
     Retrieve: Similar past problems
     ↓
-Anastrophex: Prevent recurrence
+PrefrontalOS: Prevent recurrence
     ↓
     Detect: Same pattern starting
     Intervene: Earlier, with context
@@ -313,8 +313,8 @@ events:
       "command": "clear-thought-server",
       "role": "strategic_mental_models"
     },
-    "anastrophex": {
-      "command": "anastrophex-server",
+    "prefrontalos": {
+      "command": "prefrontalos-server",
       "role": "executive_function",
       "config": {
         "enforce_pause_after_error": true,
@@ -329,31 +329,31 @@ events:
 ```
 
 **Interaction flow:**
-1. AI makes request → Anastrophex monitors
-2. Error occurs → Anastrophex enforces pause
+1. AI makes request → PrefrontalOS monitors
+2. Error occurs → PrefrontalOS enforces pause
 3. AI queries Clear-Thought → Strategic approach
-4. AI executes with tactics → Anastrophex verifies
+4. AI executes with tactics → PrefrontalOS verifies
 5. Outcome recorded → Mnemex persists
-6. Next time → Mnemex informs Anastrophex
+6. Next time → Mnemex informs PrefrontalOS
 
 ### Why This Architecture Works
 
 **Clear-thought** answers: "How should I approach this problem?"
-**Anastrophex** answers: "What command should I run right now? And WAIT - don't run it yet."
+**PrefrontalOS** answers: "What command should I run right now? And WAIT - don't run it yet."
 **Mnemex** answers: "Here's what happened last time you tried that pattern."
 
 Together they form a complete cognitive support system:
 - **Strategic framework** (clear-thought): Mental models
-- **Tactical implementation** (anastrophex): Concrete actions
-- **Executive function** (anastrophex): Impulse control, attention management
-- **Pattern detection** (anastrophex): Recognize loops before they start
+- **Tactical implementation** (prefrontalos): Concrete actions
+- **Executive function** (prefrontalos): Impulse control, attention management
+- **Pattern detection** (prefrontalos): Recognize loops before they start
 - **Persistent memory** (mnemex): Learning across sessions
 - **Research platform** (mnemex): Study cognition itself
 
 ## Timeline
 
 - **Now:** Keep development separate
-- **Phase 2 complete:** Anastrophex has proven directive injection
+- **Phase 2 complete:** PrefrontalOS has proven directive injection
 - **Phase 3 complete:** Effectiveness data from mnemex shows which tactics work
 - **Then:** Propose collaboration/PR with data-backed recommendations
 

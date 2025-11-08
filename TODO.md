@@ -1,4 +1,4 @@
-# Anastrophex Development TODO
+# PrefrontalOS Development TODO
 
 SMART Tasks: Specific, Measurable, Achievable, Relevant, Time-bound
 
@@ -323,15 +323,15 @@ SMART Tasks: Specific, Measurable, Achievable, Relevant, Time-bound
 **Objective:** Implement basic MCP server with core protocol support.
 
 **Acceptance Criteria:**
-- [ ] Update `src/anastrophex/server.py`
+- [ ] Update `src/prefrontalos/server.py`
 - [ ] Implement MCP protocol handlers:
   - `list_resources()` - available CREDO sections
   - `read_resource()` - load specific section
   - `list_tools()` - pattern detection tools
   - `call_tool()` - run pattern detection
 - [ ] Resource URIs:
-  - `anastrophex://credo/verify-before-acting`
-  - `anastrophex://credo/loop-detection`
+  - `prefrontalos://credo/verify-before-acting`
+  - `prefrontalos://credo/loop-detection`
   - etc.
 - [ ] Tool: `detect_pattern(context: dict) -> Violation`
 - [ ] Unit tests for all handlers
@@ -396,12 +396,12 @@ SMART Tasks: Specific, Measurable, Achievable, Relevant, Time-bound
 **Owner:** TBD
 **Due:** Day 7
 
-**Objective:** Allow users to configure anastrophex behavior.
+**Objective:** Allow users to configure prefrontalos behavior.
 
 **Acceptance Criteria:**
 - [ ] Create `config.yaml` with settings:
   ```yaml
-  anastrophex:
+  prefrontalos:
     timing:
       min_pause_seconds: 10
       max_pause_seconds: 30
@@ -438,7 +438,7 @@ SMART Tasks: Specific, Measurable, Achievable, Relevant, Time-bound
 **Acceptance Criteria:**
 - [ ] Extract test cases from:
   - `examples/crewai-test-case-study.md`
-  - `examples/anastrophex-venv-debugging.md`
+  - `examples/prefrontalos-venv-debugging.md`
   - GitHub API error session (documented today)
 - [ ] Create fixture: Simulated tool call history
 - [ ] Test scenarios:
@@ -511,7 +511,7 @@ SMART Tasks: Specific, Measurable, Achievable, Relevant, Time-bound
 
 **Acceptance Criteria:**
 - [ ] Update `README.md` with:
-  - What anastrophex does
+  - What prefrontalos does
   - How to install
   - How to configure
   - Example usage
@@ -598,7 +598,7 @@ SMART Tasks: Specific, Measurable, Achievable, Relevant, Time-bound
 - [ ] Document integration in `docs/integration-notes.md`
 - [ ] Example workflow:
   - Clear-Thought: Suggests "binary search" strategy
-  - Anastrophex: Enforces verbosity, detects loops
+  - PrefrontalOS: Enforces verbosity, detects loops
   - Mnemex: Records what worked
 - [ ] Test combined usage
 - [ ] Consider PR to clear-thought with tactical additions
@@ -670,7 +670,7 @@ SMART Tasks: Specific, Measurable, Achievable, Relevant, Time-bound
 **Owner:** All users
 
 **Activities:**
-- Record debugging sessions where anastrophex helped
+- Record debugging sessions where prefrontalos helped
 - Document false positives (refine detection)
 - Share intervention effectiveness
 - Build pattern library

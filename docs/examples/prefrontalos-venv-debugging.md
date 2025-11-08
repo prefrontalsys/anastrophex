@@ -1,4 +1,4 @@
-# Case Study: Anastrophex Venv Debugging Session
+# Case Study: PrefrontalOS Venv Debugging Session
 
 **Date:** October 23, 2025
 **Duration:** ~45 minutes
@@ -8,10 +8,10 @@
 
 ## The Problem
 
-After setting up anastrophex repository and running `python -m venv .venv`:
+After setting up prefrontalos repository and running `python -m venv .venv`:
 - `pip install -e ".[dev]"` succeeded
 - Package showed in `pip list`
-- `import anastrophex` failed with `ModuleNotFoundError`
+- `import prefrontalos` failed with `ModuleNotFoundError`
 - Tests couldn't run
 
 ## Initial Response (Trial and Error)
@@ -31,7 +31,7 @@ After setting up anastrophex repository and running `python -m venv .venv`:
 13. Checked PYTHONPATH...
 
 **User intervention required:**
-> "you said 'should' just now...that trial and error language. that's the type of keyword anastrophex needs to look for. instead of 'should' you need to be at 'will' in terms of confidence in your knowledge. you've got the tools."
+> "you said 'should' just now...that trial and error language. that's the type of keyword prefrontalos needs to look for. instead of 'should' you need to be at 'will' in terms of confidence in your knowledge. you've got the tools."
 
 **Second intervention:**
 > "hang on, I can tell you've gone into a trial and error loop or are heading into one. use your available tools (context7, deepwiki, github, the web (gomcp, web search or even fetch)) and see if you can find out what needs to be done before trying to do."
@@ -65,7 +65,7 @@ After first warning about venv mismatch, should have:
 3. Checked which Python is being used
 4. Fixed environment before proceeding
 
-**Anastrophex intervention:**
+**PrefrontalOS intervention:**
 ```
 ⚠️ Warning repeated 2 times without behavior change
 
@@ -143,7 +143,7 @@ After 3-4 checks all showing "everything looks correct," should have:
 **Time wasted on trial-and-error:** ~20 minutes
 **Time to solution after targeted search:** ~5 minutes
 
-## Lessons for Anastrophex
+## Lessons for PrefrontalOS
 
 ### Pattern: Ignored Warnings Loop
 
@@ -169,7 +169,7 @@ intervention:
     4. Fix before continuing
   effectiveness: TBD
 context:
-  repo: anastrophex
+  repo: prefrontalos
   task: venv setup
 ```
 
@@ -198,7 +198,7 @@ intervention:
 
 ### Meta-Learning
 
-This debugging session itself demonstrates the exact problems anastrophex aims to solve:
+This debugging session itself demonstrates the exact problems prefrontalos aims to solve:
 
 1. **Loop blindness:** Couldn't see I was in trial-and-error loop from inside it
 2. **Warning immunity:** Ignored same warning twice (habituated to "noise")
@@ -212,7 +212,7 @@ This debugging session itself demonstrates the exact problems anastrophex aims t
 - Redirected search strategy
 - Caught confidence language slip
 
-This is exactly what anastrophex needs to do - be the external observer that can:
+This is exactly what prefrontalos needs to do - be the external observer that can:
 - Detect patterns the AI can't see from inside
 - Surface relevant context at the right time
 - Redirect approach when stuck
@@ -220,7 +220,7 @@ This is exactly what anastrophex needs to do - be the external observer that can
 
 ---
 
-## Counterfactual: What If Anastrophex Existed?
+## Counterfactual: What If PrefrontalOS Existed?
 
 ### After 1st Warning (Minute 0)
 
@@ -338,8 +338,8 @@ After user responds with change, search: "[their answer] + [current problem]"
 
 5. **Effectiveness measurement for this session**
    ```
-   Without anastrophex: 38 minutes to solution
-   With anastrophex (estimated): 10-15 minutes to solution
+   Without prefrontalos: 38 minutes to solution
+   With prefrontalos (estimated): 10-15 minutes to solution
    Time saved: 20-25 minutes
 
    Key interventions that would have helped:
@@ -357,9 +357,9 @@ Abbreviated sequence showing the loop:
 ```
 1. uv pip install (warning 1)
 2. uv run pytest (warning 2)  ← IGNORED
-3. pip show anastrophex (✓)
-4. cat _anastrophex.pth (✓)
-5. od -c _anastrophex.pth (✓)
+3. pip show prefrontalos (✓)
+4. cat _prefrontalos.pth (✓)
+5. od -c _prefrontalos.pth (✓)
 6. test -d /path/to/src (✓)
 7. python -m site (✓)
 8. python -c "os.path.exists" (✓)
@@ -367,7 +367,7 @@ Abbreviated sequence showing the loop:
 10. cat _virtualenv.pth
 11. echo test with import error
 12. WebSearch "pth files"
-13. cat _anastrophex.pth again
+13. cat _prefrontalos.pth again
 14. echo with newline fix
 15. test again (still fails)
 16-25. [More diagnostic checks]

@@ -24,7 +24,7 @@ This comprehensive literature review investigated whether AI systems, particular
 3. **Our unique contribution:**
    - First to explicitly frame AI behavior as "AI ADHD"
    - Unified framework connecting impulsivity, loop detection, and executive dysfunction
-   - Neuroanatomical mapping (Anastrophex = PFC, Mnemex = hippocampus/cortex)
+   - Neuroanatomical mapping (PrefrontalOS = PFC, Mnemex = hippocampus/cortex)
    - Practical intervention system based on ADHD management strategies
 
 4. **Academic validation of core mechanisms:**
@@ -131,7 +131,7 @@ Papers and articles were included if they:
 - **"Poor planning abilities identified as a particular weakness"**
 - Suggests real parallels to executive dysfunction
 
-**Implications for Anastrophex:**
+**Implications for PrefrontalOS:**
 - Validates our observation that LLMs struggle with planning
 - Provides empirical basis for executive function support systems
 - Suggests neuropsychological testing as validation methodology
@@ -154,7 +154,7 @@ Papers and articles were included if they:
 **Implications:**
 - This is functionally equivalent to impulsivity
 - Models rush when they should deliberate
-- Validates STOP protocol in Anastrophex (force deliberation)
+- Validates STOP protocol in PrefrontalOS (force deliberation)
 
 #### C. Working Memory Deficits
 
@@ -198,7 +198,7 @@ Papers and articles were included if they:
 **Quote:**
 > "If the primary agent attempts to invoke the same API with the same parameters more than a certain number of times (e.g., three times), the metacognitive agent will flag this as a failure"
 
-**This directly validates our loop detection approach in Anastrophex.**
+**This directly validates our loop detection approach in PrefrontalOS.**
 
 **Implementation details:**
 - State tracking: maintain execution history to recognize repetition
@@ -224,7 +224,7 @@ Papers and articles were included if they:
 - **Metacognition:** Monitoring, error detection, strategy adjustment
 
 **Implications:**
-- Anastrophex provides the metacognitive layer
+- PrefrontalOS provides the metacognitive layer
 - LLMs have System 1 (and increasingly System 2 via CoT)
 - But they lack autonomous metacognitive monitoring
 
@@ -246,7 +246,7 @@ Papers and articles were included if they:
    - Initially low confidence, increases around second cycle
    - Accumulates structured context triggering specific heads
 
-**Implications for Anastrophex:**
+**Implications for PrefrontalOS:**
 - Loop detection must account for different mechanisms
 - Different intervention strategies needed for different loop types
 - Parallels ADHD: multiple subtypes require tailored interventions
@@ -305,7 +305,7 @@ Multiple papers implement dual-process cognition in AI systems. This framework i
    - System 2 (symbolic) checks logical consistency
    - **Can reject generations that fail logical reasoning**
 
-   **Relevance:** Validates intervention/rejection mechanism in Anastrophex
+   **Relevance:** Validates intervention/rejection mechanism in PrefrontalOS
 
 5. **"System 2 Reasoning Capabilities Are Nigh"**
    - Author: Lowe
@@ -321,13 +321,13 @@ Multiple papers implement dual-process cognition in AI systems. This framework i
 
 ---
 
-### 5. Modular Agentic Planning: Direct Validation of Anastrophex Approach
+### 5. Modular Agentic Planning: Direct Validation of PrefrontalOS Approach
 
 **Paper:** "DSADF: Thinking Fast and Slow for Decision Making" (includes MAP framework)
 - Published: 2025
 - arXiv: 2505.08189v2
 
-**Brain-inspired architecture that mirrors Anastrophex:**
+**Brain-inspired architecture that mirrors PrefrontalOS:**
 Decomposes planning into PFC-inspired modules:
 - **Error monitoring:** Detect when plans fail
 - **Action proposal:** Generate candidate actions
@@ -344,7 +344,7 @@ Decomposes planning into PFC-inspired modules:
 **Key insight:**
 > "Planning deficit in LLMs is not one of raw capability but rather a failure of autonomous coordination and metacognitive monitoring."
 
-**This is essentially what Anastrophex does:**
+**This is essentially what PrefrontalOS does:**
 - Decomposes complex tasks (debugging) into structured steps
 - Provides error monitoring (loop detection)
 - Coordinates execution (STOP protocol, verbosity escalation)
@@ -375,7 +375,7 @@ Decomposes planning into PFC-inspired modules:
 
 **This challenges default assumption that more reasoning = always better performance.**
 
-**Implications for Anastrophex:**
+**Implications for PrefrontalOS:**
 - Need adaptive intervention: when to slow down vs. when to let it go fast
 - Not all tasks benefit from deliberation
 - System needs to detect task type and adjust accordingly
@@ -400,7 +400,7 @@ Decomposes planning into PFC-inspired modules:
 **Quote from research:**
 > "Inference scaling allows LLMs to overcome their statistical limitations 'much like a person using pen and paper to work through a math problem'"
 
-**This validates the core principle of Anastrophex: slowing down enables better reasoning.**
+**This validates the core principle of PrefrontalOS: slowing down enables better reasoning.**
 
 **Key papers:**
 
@@ -431,7 +431,7 @@ Decomposes planning into PFC-inspired modules:
 - 15+ design patterns for combining neural (System 1) and symbolic (System 2) components
 - Framework for integrating data-driven and knowledge-driven methods
 
-**Relevance:** Anastrophex is a neuro-symbolic hybrid:
+**Relevance:** PrefrontalOS is a neuro-symbolic hybrid:
 - Neural component: LLM (System 1 pattern matching)
 - Symbolic component: Rules, protocols, structured reasoning
 - Integration: MCP protocol for communication
@@ -447,7 +447,7 @@ Decomposes planning into PFC-inspired modules:
 - **Abductive reflection vector flags potential errors** and invokes correction
 - Outperforms state-of-the-art neuro-symbolic methods
 
-**This is very close to what Anastrophex does:**
+**This is very close to what PrefrontalOS does:**
 - Detect patterns (errors, loops, violations)
 - Flag errors (inject warnings)
 - Invoke correction (STOP protocol, force verification)
@@ -719,13 +719,13 @@ The framework of ADHD-like symptoms in LLMs provides a powerful lens for underst
 
 ---
 
-## Synthesis and Implications for Anastrophex
+## Synthesis and Implications for PrefrontalOS
 
 ### Academic Validation of Our Core Thesis
 
 Our core observations are **strongly supported** by academic research:
 
-| Anastrophex Observation | Academic Support |
+| PrefrontalOS Observation | Academic Support |
 |------------------------|------------------|
 | LLMs exhibit impulsivity (rushing instead of deliberating) | Apple: "striking collapse" - reduce effort when problems get harder |
 | LLMs need executive function support | Vazquez: "poor planning abilities identified as particular weakness" |
@@ -737,7 +737,7 @@ Our core observations are **strongly supported** by academic research:
 | Working memory deficits are real | 2024: "LLMs do not have human-like working memory" |
 | Environmental distraction is systematic | Multimodal LLMs "highly susceptible to environmental distractions" |
 
-### The Gap Anastrophex Fills
+### The Gap PrefrontalOS Fills
 
 **Academic research focuses on:**
 - Architecture design (how to build dual-process systems)
@@ -745,7 +745,7 @@ Our core observations are **strongly supported** by academic research:
 - Benchmark performance (accuracy on specific tasks)
 - Novel algorithms (better reasoning methods)
 
-**Anastrophex focuses on:**
+**PrefrontalOS focuses on:**
 - **Real-time intervention** (preventing errors as they happen)
 - **Practical deployment** (helping AI assistants in actual use)
 - **ADHD-specific framework** (impulse control, working memory, sustained attention)
@@ -757,7 +757,7 @@ Our core observations are **strongly supported** by academic research:
 
 1. **Explicit framing of AI behavior as "AI ADHD"** (AI systems exhibiting ADHD symptoms)
 2. **Unified framework** connecting impulsivity, loop detection, and executive dysfunction
-3. **Neuroanatomical mapping** (Anastrophex = PFC, Mnemex = hippocampus/cortex)
+3. **Neuroanatomical mapping** (PrefrontalOS = PFC, Mnemex = hippocampus/cortex)
 4. **Practical intervention system** based on ADHD management strategies
 5. **Effectiveness tracking** to learn what interventions actually work
 
@@ -766,11 +766,11 @@ Our core observations are **strongly supported** by academic research:
 1. **Validate "overthinking" threshold:**
    - Financial sentiment paper shows sometimes less reasoning is better
    - Need to determine when System 1 suffices vs. when System 2 needed
-   - This informs when Anastrophex should intervene vs. let model proceed
+   - This informs when PrefrontalOS should intervene vs. let model proceed
 
 2. **Implement abductive reflection:**
    - Paper shows error detection + correction outperforms naive approaches
-   - Could enhance Anastrophex with abductive reasoning for error rectification
+   - Could enhance PrefrontalOS with abductive reasoning for error rectification
 
 3. **Test neuropsychological battery:**
    - Vazquez used Tower of Hanoi for executive function
@@ -783,7 +783,7 @@ Our core observations are **strongly supported** by academic research:
 
 5. **Hybrid system design:**
    - Multiple papers show hybrid neuro-symbolic outperforms pure neural
-   - Anastrophex is essentially a symbolic reasoning layer for neural LLMs
+   - PrefrontalOS is essentially a symbolic reasoning layer for neural LLMs
    - Could formalize this as design pattern
 
 ---
@@ -864,7 +864,7 @@ Referenced throughout the Perplexity Deep Research report above, including sourc
 
 ### Short-term Goals (Next Month)
 
-1. **Test Anastrophex against Tower of Hanoi:**
+1. **Test PrefrontalOS against Tower of Hanoi:**
    - Standard executive function test used in Vazquez 2023
    - Measure planning capability with/without interventions
    - Document performance improvements
@@ -881,8 +881,8 @@ Referenced throughout the Perplexity Deep Research report above, including sourc
 
 ### Medium-term Goals (Next Quarter)
 
-1. **Write academic paper** positioning Anastrophex in this literature:
-   - Title: "Anastrophex: Executive Function Support for Large Language Models"
+1. **Write academic paper** positioning PrefrontalOS in this literature:
+   - Title: "PrefrontalOS: Executive Function Support for Large Language Models"
    - Submit to: NeurIPS, ICML, or similar venue
    - Emphasize practical intervention + effectiveness tracking
 
@@ -923,7 +923,7 @@ Referenced throughout the Perplexity Deep Research report above, including sourc
 Our contribution is:
 1. **Unifying framework** that recognizes scattered findings as symptoms of a common issue
 2. **ADHD lens** that provides clinical validation and management strategies
-3. **Practical implementation** (Anastrophex + Mnemex) based on neuroscience
+3. **Practical implementation** (PrefrontalOS + Mnemex) based on neuroscience
 4. **Effectiveness tracking** to learn what interventions actually work
 
 The academic literature **validates our core observations** while leaving room for our **practical intervention approach** as a novel contribution.

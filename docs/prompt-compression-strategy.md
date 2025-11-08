@@ -1,8 +1,8 @@
-# Prompt Compression Strategy for Anastrophex
+# Prompt Compression Strategy for PrefrontalOS
 
 ## Problem Statement
 
-As we build out anastrophex with comprehensive rules, frameworks, and architectural guidance, we face token budget constraints:
+As we build out prefrontalos with comprehensive rules, frameworks, and architectural guidance, we face token budget constraints:
 
 **Current token usage concerns:**
 - CLAUDE.md: ~2-3K tokens (debugging principles, tool usage, CI/CD best practices)
@@ -35,7 +35,7 @@ This doesn't include:
 - Task-agnostic (works on any prompt type)
 - 3x-6x faster than LLMLingua v1
 
-### Application to Anastrophex
+### Application to PrefrontalOS
 
 **Compress static guidance documents:**
 
@@ -73,7 +73,7 @@ compressed = compressor.compress_prompt(
 
 ```python
 # Load compressed versions into context
-anastrophex_context = {
+prefrontalos_context = {
     "core_principles": compress(AI_CREDO, rate=0.2),  # 80% reduction
     "debugging_framework": compress(5W1H, rate=0.3),  # 70% reduction
     "adhd_patterns": compress(cognitive_model, rate=0.4),  # 60% reduction
@@ -211,7 +211,7 @@ With 50+ rules: ~2500 tokens → ~500 tokens
 ### Hierarchical Rule Representation
 
 ```xml
-<anastrophex-rules version="1.0">
+<prefrontalos-rules version="1.0">
 
   <rule id="rushing-after-error" severity="warning">
     <detect>
@@ -245,7 +245,7 @@ With 50+ rules: ~2500 tokens → ~500 tokens
     </actions>
   </intervention>
 
-</anastrophex-rules>
+</prefrontalos-rules>
 ```
 
 ### Benefits
@@ -261,7 +261,7 @@ With 50+ rules: ~2500 tokens → ~500 tokens
 ```python
 import xml.etree.ElementTree as ET
 
-class AnastrophexRules:
+class PrefrontalOSRules:
     def __init__(self, xml_path):
         self.tree = ET.parse(xml_path)
         self.root = self.tree.getroot()
@@ -384,7 +384,7 @@ if user_asks_why:
    - Parse XML interventions
    - Load compressed docs on-demand
 
-3. **Integration with anastrophex MCP**
+3. **Integration with prefrontalos MCP**
    - Rules loaded at server start
    - Violations detected via symbolic evaluation
    - Interventions retrieved from XML
@@ -531,7 +531,7 @@ Tomorrow's proof-of-concept should demonstrate:
 
 **This Week:**
 1. Migrate core rules to chosen format
-2. Integrate with anastrophex MCP server
+2. Integrate with prefrontalos MCP server
 3. Test in real debugging sessions
 4. Document notation for contributors
 

@@ -17,7 +17,7 @@ This session **validates the STOP protocol design** by demonstrating:
 
 **What happened:** User requested Python 3.12.11 venv upgrade. Assistant hit an error (`uv run pytest` failed), but was about to continue without debugging. User intervened with STOP protocol directives. Assistant then followed proper debugging procedure and resolved issue efficiently.
 
-**Proof of concept:** This interaction proves anastrophex's core premise - the debugging protocol works, we just need to automate the activation trigger.
+**Proof of concept:** This interaction proves prefrontalos's core premise - the debugging protocol works, we just need to automate the activation trigger.
 
 ---
 
@@ -26,7 +26,7 @@ This session **validates the STOP protocol design** by demonstrating:
 User requested: "okay, we need to upgrade the current venv to 3.12.11"
 
 **Context:**
-- Project: anastrophex MCP server
+- Project: prefrontalos MCP server
 - Environment: macOS with direnv, pyenv, mise, uv available
 - Current venv: Python 3.12.11 but pointing to wrong project paths (old `behavior-mcp` directory)
 
@@ -54,7 +54,7 @@ User message:
 
 **Note:** User instructed to run `aliases` (a custom command showing zsh environment changes), but assistant ran `alias` (builtin showing all aliases). Both helped, but `aliases` would have been more targeted. User is developing an MCP server to expose these environment changes automatically.
 
-This message **is exactly what anastrophex should inject** when detecting error → continue pattern.
+This message **is exactly what prefrontalos should inject** when detecting error → continue pattern.
 
 ---
 
@@ -89,7 +89,7 @@ Steps:
 
 Error from pip:
 ```
-/Users/sc/Documents/GitHub/anastrophex/.venv/bin/pip: bad interpreter:
+/Users/sc/Documents/GitHub/prefrontalos/.venv/bin/pip: bad interpreter:
 /Users/sc/Documents/GitHub/behavior-mcp/.venv/bin/python3: no such file or directory
 ```
 
@@ -217,7 +217,7 @@ The clear-thought debugging tool provided structure:
 
 ---
 
-## The Pattern Anastrophex Should Detect
+## The Pattern PrefrontalOS Should Detect
 
 ### Trigger Conditions
 
@@ -264,7 +264,7 @@ if tool_result.contains_error():
 
 > "okay, you've hit an error, don't guess what you need to do next, spend some time, slow down, search the web... turn on verbose mode on all commands until what you need runs without error."
 
-### What Anastrophex Should Inject (Automated)
+### What PrefrontalOS Should Inject (Automated)
 
 ```
 ⚠️ ERROR DETECTED
@@ -300,7 +300,7 @@ Do NOT try multiple commands in parallel until root cause is found.
 
 ---
 
-## Validation of Anastrophex Design
+## Validation of PrefrontalOS Design
 
 ### ✅ The Protocol Works
 
@@ -342,7 +342,7 @@ This proves: **The system works, but needs automated trigger detection.**
 
 ---
 
-## Lessons for Anastrophex Implementation
+## Lessons for PrefrontalOS Implementation
 
 ### Phase 1: Pattern Detection (Ready to Implement)
 
@@ -458,7 +458,7 @@ The debugging approach tool provided structure when the assistant was about to s
 mcp__clear-thought-mcp-server__debuggingapproach
 ```
 
-Anastrophex should suggest this tool in interventions:
+PrefrontalOS should suggest this tool in interventions:
 > "Use clear-thought's debuggingapproach tool to structure your investigation."
 
 ### 4. Add "Check Environment" to Diagnostic Checklist
@@ -472,7 +472,7 @@ The `aliases` command (user's custom command showing zsh env changes) would have
 
 In this session, the assistant was **about to** enter trial-and-error mode, but user stopped it pre-emptively.
 
-Anastrophex should track:
+PrefrontalOS should track:
 - `prevented_loops`: Interventions that stopped loops before they happened
 - `early_intervention_success`: Ratio of pre-emptive vs reactive interventions
 
@@ -482,7 +482,7 @@ Anastrophex should track:
 
 ## Meta-Learning: This Session IS The Proof
 
-This debugging session **validates the entire anastrophex premise:**
+This debugging session **validates the entire prefrontalos premise:**
 
 1. **AI assistants DO get stuck in patterns** (was about to trial-and-error)
 2. **External intervention works** (user's STOP message redirected immediately)
@@ -490,9 +490,9 @@ This debugging session **validates the entire anastrophex premise:**
 4. **The pattern is observable** (error → continue without diagnosis)
 5. **Automated detection is feasible** (clear trigger conditions)
 
-The only difference between manual (user) and automated (anastrophex) intervention is:
+The only difference between manual (user) and automated (prefrontalos) intervention is:
 - User: Detected pattern, typed message manually
-- Anastrophex: Should detect same pattern, inject same message automatically
+- PrefrontalOS: Should detect same pattern, inject same message automatically
 
 **Conclusion:** We have proven that:
 - The problem exists ✅
@@ -547,7 +547,7 @@ $ pytest -vv
 
 ---
 
-## Counterfactual: What If Anastrophex Existed?
+## Counterfactual: What If PrefrontalOS Existed?
 
 ### After Error (Immediate)
 
@@ -594,7 +594,7 @@ Do NOT try multiple approaches until root cause is identified.
 
 ## Success Metrics
 
-| Metric | Without STOP | With STOP (manual) | With Anastrophex (projected) |
+| Metric | Without STOP | With STOP (manual) | With PrefrontalOS (projected) |
 |--------|--------------|-------------------|------------------------------|
 | Time to solution | ~25 min | 15 min | ~12 min |
 | Failed attempts | 5-7 | 0 | 0 |
@@ -603,7 +603,7 @@ Do NOT try multiple approaches until root cause is identified.
 | Web searches | 3-4 (wrong keywords) | 1 (targeted) | 1 (targeted) |
 | User interventions | 1 (manual STOP) | 1 (manual STOP) | 0 (automated) |
 
-**Key insight:** Manual STOP intervention saved 10 minutes. Automated anastrophex would save 13 minutes (earlier detection + no waiting for user to notice).
+**Key insight:** Manual STOP intervention saved 10 minutes. Automated prefrontalos would save 13 minutes (earlier detection + no waiting for user to notice).
 
 ---
 

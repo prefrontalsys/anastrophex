@@ -1,5 +1,5 @@
 """
-Anastrophex MCP Server
+PrefrontalOS MCP Server
 
 Monitors AI assistant behavior patterns and provides timely interventions
 to help break out of trial-and-error loops.
@@ -12,11 +12,11 @@ from mcp.server import Server
 from mcp.types import Resource, Tool
 
 
-class AnastrophexServer:
+class PrefrontalOSServer:
     """Main MCP server for behavior pattern detection and intervention."""
 
     def __init__(self) -> None:
-        self.server = Server("anastrophex")
+        self.server = Server("prefrontalos")
         self.tool_history: list[dict[str, Any]] = []
         self.detected_patterns: list[str] = []
 
@@ -30,19 +30,19 @@ class AnastrophexServer:
         """List available resources."""
         return [
             Resource(
-                uri="anastrophex://patterns/all",
+                uri="prefrontalos://patterns/all",
                 name="All known patterns",
-                description="List all behavior patterns that anastrophex can detect",
+                description="List all behavior patterns that prefrontalos can detect",
                 mimeType="application/json",
             ),
             Resource(
-                uri="anastrophex://alerts/active",
+                uri="prefrontalos://alerts/active",
                 name="Active alerts",
                 description="Currently triggered patterns and pending interventions",
                 mimeType="application/json",
             ),
             Resource(
-                uri="anastrophex://directives/all",
+                uri="prefrontalos://directives/all",
                 name="All directives",
                 description="Directives from CLAUDE.md mapped to patterns",
                 mimeType="application/json",
@@ -51,11 +51,11 @@ class AnastrophexServer:
 
     async def _read_resource(self, uri: str) -> str:
         """Read a specific resource."""
-        if uri == "anastrophex://patterns/all":
+        if uri == "prefrontalos://patterns/all":
             return self._get_all_patterns()
-        elif uri == "anastrophex://alerts/active":
+        elif uri == "prefrontalos://alerts/active":
             return self._get_active_alerts()
-        elif uri == "anastrophex://directives/all":
+        elif uri == "prefrontalos://directives/all":
             return self._get_all_directives()
         else:
             raise ValueError(f"Unknown resource: {uri}")
@@ -150,8 +150,8 @@ class AnastrophexServer:
 
 
 def main() -> None:
-    """Entry point for the anastrophex MCP server."""
-    server = AnastrophexServer()
+    """Entry point for the prefrontalos MCP server."""
+    server = PrefrontalOSServer()
     asyncio.run(server.run())
 
 
