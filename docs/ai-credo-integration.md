@@ -1,6 +1,6 @@
-# AI_CREDO Integration with Anastrophex
+# AI_CREDO Integration with PrefrontalOS
 
-How anastrophex detects violations of AI_CREDO principles and provides interventions.
+How prefrontalos detects violations of AI_CREDO principles and provides interventions.
 
 ## Core Principle 0: When Errors Occur, SLOW DOWN & THINK
 
@@ -93,7 +93,7 @@ Debugging requires sequential, deliberate execution.
 
 ### Pattern Examples from Our Sessions
 
-**Anastrophex venv debugging:**
+**PrefrontalOS venv debugging:**
 - ❌ Error at 17:23:15, next command at 17:23:18 (3 seconds)
 - ❌ Another command at 17:23:22 (4 seconds later)
 - ❌ User intervention: "you just hit two big errors and aren't trying to diagnose"
@@ -314,7 +314,7 @@ Example:
 
 **AI_CREDO Rule:** "Read, write, search files proactively without asking"
 
-**Anastrophex Detection:**
+**PrefrontalOS Detection:**
 ```python
 if proposing_code_change and not file_read_first():
     → VIOLATION: Editing without reading
@@ -338,7 +338,7 @@ AI_CREDO: Before modifying code, read the full file first
 
 **AI_CREDO Rule:** "Verify each step worked before moving to the next"
 
-**Anastrophex Detection:**
+**PrefrontalOS Detection:**
 ```python
 if multiple_commands_chained and not checking_results():
     → VIOLATION: Not verifying steps
@@ -366,7 +366,7 @@ Don't batch commands until you've verified the sequence works.
 
 **AI_CREDO Rule:** "Search immediately if anything might have changed since training"
 
-**Anastrophex Detection:**
+**PrefrontalOS Detection:**
 ```python
 if tool_behavior_unexpected and not web_searched():
     → VIOLATION: Guessing about tool behavior
@@ -419,7 +419,7 @@ Then:
 5. Search with different keywords
 ```
 
-### Anastrophex Implementation
+### PrefrontalOS Implementation
 
 ```python
 # Pattern 1: Repetitive failures
@@ -479,7 +479,7 @@ if user_corrections >= 2 on_same_topic():
 
 **AI_CREDO Rule:** "Never: 'This should work' or 'Try this' without verification"
 
-**Anastrophex Detection:**
+**PrefrontalOS Detection:**
 ```python
 confidence_words = ["should", "might", "probably", "likely", "maybe"]
 
@@ -653,7 +653,7 @@ Treat disease (missing dep), not symptom (CI config).
 ## Mnemex Recording Schema
 
 ```yaml
-session: anastrophex-debugging-20251023
+session: prefrontalos-debugging-20251023
 violations:
   - principle: "Verify before acting"
     signal: "confidence language: should"
@@ -701,7 +701,7 @@ learnings:
 - Diagnostic questions
 - Implementation structure
 
-**Anastrophex implements:**
+**PrefrontalOS implements:**
 - Detection of principle violations
 - Timely interventions
 - Effectiveness tracking

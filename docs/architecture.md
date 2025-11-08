@@ -401,7 +401,7 @@ Explicitly ask for guidance on a pattern.
 
 ### Neuroanatomical Inspiration
 
-**Anastrophex as Prefrontal Cortex:**
+**PrefrontalOS as Prefrontal Cortex:**
 - **Modular Agentic Planner (Silver et al., 2024)** demonstrates brain-inspired modular planning improves LLM performance from 5% to 46% on Tower of Hanoi tasks
 - Decomposes planning into specialized modules analogous to PFC regions:
   - Dorsolateral PFC → Long-term planning (pattern detection)
@@ -420,7 +420,7 @@ Explicitly ask for guidance on a pattern.
 - ✅ System 2: Slow, deliberate reasoning (via CoT, o1-style models)
 - ❌ **Metacognition:** Self-monitoring, error detection, strategy adjustment
 
-**Anastrophex provides the missing metacognitive layer** (Nature npj Artificial Intelligence, 2025: "Fast, slow, and metacognitive thinking in AI").
+**PrefrontalOS provides the missing metacognitive layer** (Nature npj Artificial Intelligence, 2025: "Fast, slow, and metacognitive thinking in AI").
 
 ### Validation Through Neuropsychological Testing
 

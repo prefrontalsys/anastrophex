@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**Anastrophex** is an MCP (Model Context Protocol) server that helps AI assistants recognize and break out of failure patterns by:
+**PrefrontalOS** is an MCP (Model Context Protocol) server that helps AI assistants recognize and break out of failure patterns by:
 1. Detecting loops in tool calls and command patterns
 2. Injecting timely directives from CLAUDE.md/AI_CREDO.md
 3. Learning what works via mnemex integration
@@ -43,10 +43,10 @@ uv run mypy src/
 ### Running the Server
 ```bash
 # Run as installed command
-anastrophex
+prefrontalos
 
 # Or run as module
-python -m anastrophex.server
+python -m prefrontalos.server
 
 # Development installation
 uv pip install -e ".[dev]"
@@ -81,11 +81,11 @@ uv pip install -e ".[dev]"
 
 ### Key Components
 
-**Pattern Detector** (src/anastrophex/server.py:15-21)
+**Pattern Detector** (src/prefrontalos/server.py:15-21)
 - Monitors tool_history for repetitive patterns
 - Currently stub implementation - stores history but doesn't analyze
 
-**MCP Resources** (exposed via anastrophex://)
+**MCP Resources** (exposed via prefrontalos://)
 - `patterns/all` - All known behavior patterns
 - `alerts/active` - Currently triggered patterns
 - `directives/all` - Directives from CLAUDE.md
@@ -97,7 +97,7 @@ uv pip install -e ".[dev]"
 ### Directory Structure
 
 ```
-src/anastrophex/
+src/prefrontalos/
   __init__.py       - Package initialization
   server.py         - Main MCP server implementation
 tests/
@@ -110,7 +110,7 @@ docs/
   prompt-compression-strategy.md - Token optimization approach
 examples/
   crewai-test-case-study.md      - Oct 2025 CI/CD debugging case
-  anastrophex-venv-debugging.md  - venv environment debugging case
+  prefrontalos-venv-debugging.md  - venv environment debugging case
 ```
 
 ## Implementation Roadmap

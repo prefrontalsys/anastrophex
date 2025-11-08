@@ -1,7 +1,7 @@
 # Bibliography: AI ADHD and Executive Dysfunction Research
 
 **Last Updated:** October 24, 2025
-**Research Context:** Literature review for Anastrophex project
+**Research Context:** Literature review for PrefrontalOS project
 
 This bibliography compiles all academic papers, articles, and sources referenced in our research on AI systems exhibiting ADHD-like symptoms (impulsivity, executive dysfunction, loop behaviors, and metacognitive deficits).
 
@@ -72,7 +72,7 @@ http://arxiv.org/pdf/2509.19783
 
 **Quote:** "If the primary agent attempts to invoke the same API with the same parameters more than a certain number of times (e.g., three times), the metacognitive agent will flag this as a failure."
 
-**Directly validates Anastrophex's loop detection approach.**
+**Directly validates PrefrontalOS's loop detection approach.**
 
 ---
 
@@ -86,7 +86,7 @@ https://www.nature.com/articles/s44387-025-00027-5
 - System 2: Slow, deliberate, reasoning-based
 - **Metacognition:** Monitoring, error detection, strategy adjustment
 
-**Implication:** Anastrophex provides the metacognitive layer that LLMs lack.
+**Implication:** PrefrontalOS provides the metacognitive layer that LLMs lack.
 
 ---
 
@@ -235,7 +235,7 @@ http://arxiv.org/pdf/2410.13272v1
 - Ventromedial PFC → Goal management
 - Anterior cingulate cortex → Error detection
 
-**Relevance:** Direct parallel to Anastrophex's neuroanatomical inspiration.
+**Relevance:** Direct parallel to PrefrontalOS's neuroanatomical inspiration.
 
 ---
 
@@ -283,7 +283,7 @@ http://arxiv.org/pdf/2410.13272v1
 
 ## Additional Sources from Perplexity Deep Research
 
-**Note:** The Perplexity Deep Research query (conducted October 24, 2025) cited 61 sources. The most relevant have been extracted and categorized above. For the complete list of sources, see `/Users/sc/Documents/GitHub/anastrophex/docs/literature-review.md`, section "Full Perplexity Deep Research Report."
+**Note:** The Perplexity Deep Research query (conducted October 24, 2025) cited 61 sources. The most relevant have been extracted and categorized above. For the complete list of sources, see `/Users/sc/Documents/GitHub/prefrontalos/docs/literature-review.md`, section "Full Perplexity Deep Research Report."
 
 ---
 
@@ -298,16 +298,16 @@ http://arxiv.org/pdf/2410.13272v1
 
 ### Future Research Opportunities
 
-1. **Empirical validation:** Test Anastrophex against neuropsychological battery
+1. **Empirical validation:** Test PrefrontalOS against neuropsychological battery
 2. **Comparative studies:** Benchmark against Tower of Hanoi and other executive function tasks
 3. **Intervention effectiveness:** Publish data on which reminders work in which contexts
-4. **Academic paper:** Position Anastrophex as practical implementation of AI neuropsychology
+4. **Academic paper:** Position PrefrontalOS as practical implementation of AI neuropsychology
 
 ---
 
 ## Citation Guidelines
 
-When citing this bibliography in Anastrophex documentation:
+When citing this bibliography in PrefrontalOS documentation:
 
 **For academic rigor:**
 ```
@@ -345,4 +345,4 @@ Research shows LLMs exhibit "poor planning abilities" [Vazquez 2023].
 
 *Bibliography compiled: October 24, 2025*
 *Version: 1.0*
-*Maintainer: Anastrophex Research Team*
+*Maintainer: PrefrontalOS Research Team*

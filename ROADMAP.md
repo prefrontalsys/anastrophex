@@ -1,4 +1,4 @@
-# Anastrophex Implementation Roadmap
+# PrefrontalOS Implementation Roadmap
 
 ## Phase 1: Pattern Detection (Weeks 1-2)
 
@@ -31,7 +31,7 @@
 - [ ] Implement `DirectiveInjector` class
 - [ ] Design reminder format (⚠️ Loop detected template)
 - [ ] Inject reminders via tool result augmentation
-- [ ] Add MCP resource: `anastrophex://alerts/active`
+- [ ] Add MCP resource: `prefrontalos://alerts/active`
 - [ ] Test timing: trigger after N-1 attempts, before Nth
 
 ### Success Criteria

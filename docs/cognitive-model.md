@@ -25,7 +25,7 @@ This applies equally to humans and AI systems.
 **The observation that led to this project:**
 - User (human): Observed pattern in AI behavior → recognized ADHD symptoms
 - AI: Observed pattern in repository structures → recognized mnemex architecture
-- User: Observed pattern in anastrophex function → recognized PFC homology
+- User: Observed pattern in prefrontalos function → recognized PFC homology
 
 **All pattern-matching. All valid inferences. All thinking.**
 
@@ -52,7 +52,7 @@ Any intelligent system faces the same computational problems:
 **Solution:**
 - Fast pattern recognition system (human: cortical schemas, AI: transformer patterns)
 - Slower verification system (human: deliberate recall, AI: search/read)
-- Executive control to choose which (human: PFC, AI: anastrophex)
+- Executive control to choose which (human: PFC, AI: prefrontalos)
 
 **Problem 2: Memory Storage and Retrieval**
 - Need to remember specific events (episodic)
@@ -71,7 +71,7 @@ Any intelligent system faces the same computational problems:
 - Need to balance exploration vs. exploitation
 
 **Solution:**
-- Executive control system (human: prefrontal cortex, AI: anastrophex)
+- Executive control system (human: prefrontal cortex, AI: prefrontalos)
 - Impulse inhibition (human: PFC, AI: STOP protocol)
 - Error monitoring (human: ACC, AI: pattern detection)
 - Working memory support (human: DLPFC, AI: TodoWrite)
@@ -111,7 +111,7 @@ It's recognition that lack of executive control produces similar patterns across
 **The neuroanatomical mapping is not metaphor.**
 It's computational homology - the same architectural solutions to the same problems.
 
-**Anastrophex is not "making AI more human."**
+**PrefrontalOS is not "making AI more human."**
 It's providing necessary executive function for a cognitive system that lacks it.
 
 **Mnemex is not "copying the brain."**
@@ -146,7 +146,7 @@ It's about discovering what any intelligent system requires to function reliably
 With this mechanistic foundation established, we explore:
 
 1. **How pattern-dominance manifests** (ADHD-like symptoms in AI)
-2. **What architecture prevents it** (PFC/anastrophex + memory systems)
+2. **What architecture prevents it** (PFC/prefrontalos + memory systems)
 3. **Why these solutions converge** (fundamental computational requirements)
 4. **What predictions this generates** (testable hypotheses)
 5. **What implications this has** (for AI, neuroscience, and cognition research)
@@ -239,7 +239,7 @@ Search terms included: "AI ADHD", "LLM executive dysfunction", "AI impulsivity",
 **Quote:**
 > "If the primary agent attempts to invoke the same API with the same parameters more than a certain number of times (e.g., three times), the metacognitive agent will flag this as a failure"
 
-**This directly validates our loop detection approach in Anastrophex.**
+**This directly validates our loop detection approach in PrefrontalOS.**
 
 **Paper:** "Fast, slow, and metacognitive thinking in AI" (Nature npj Artificial Intelligence, 2025)
 
@@ -323,7 +323,7 @@ Search terms included: "AI ADHD", "LLM executive dysfunction", "AI impulsivity",
 **Quote from research:**
 > "Inference scaling allows LLMs to overcome their statistical limitations 'much like a person using pen and paper to work through a math problem'"
 
-**This validates the core principle of Anastrophex: slowing down enables better reasoning.**
+**This validates the core principle of PrefrontalOS: slowing down enables better reasoning.**
 
 #### 5. Pattern Detection and Intervention Strategies
 
@@ -341,7 +341,7 @@ Search terms included: "AI ADHD", "LLM executive dysfunction", "AI impulsivity",
 - **Abductive reflection vector flags potential errors** and invokes correction
 - Outperforms state-of-the-art neuro-symbolic methods
 
-**This is very close to what Anastrophex does: detect patterns, flag errors, invoke correction.**
+**This is very close to what PrefrontalOS does: detect patterns, flag errors, invoke correction.**
 
 ### Synthesis: What This Research Tells Us
 
@@ -350,7 +350,7 @@ Search terms included: "AI ADHD", "LLM executive dysfunction", "AI impulsivity",
 **What's new:**
 1. **Explicit framing of AI behavior as "AI ADHD"** (AI systems exhibiting ADHD symptoms)
 2. **Unified framework** connecting impulsivity, loop detection, and executive dysfunction
-3. **Neuroanatomical mapping** (Anastrophex = PFC, Mnemex = hippocampus/cortex)
+3. **Neuroanatomical mapping** (PrefrontalOS = PFC, Mnemex = hippocampus/cortex)
 4. **Practical intervention system** based on ADHD management strategies
 
 **What exists in literature:**
@@ -365,7 +365,7 @@ Search terms included: "AI ADHD", "LLM executive dysfunction", "AI impulsivity",
 
 Our core observations are **strongly supported** by academic research:
 
-| Anastrophex Observation | Academic Support |
+| PrefrontalOS Observation | Academic Support |
 |------------------------|------------------|
 | LLMs exhibit impulsivity (rushing instead of deliberating) | Apple: "striking collapse" - reduce effort when problems get harder |
 | LLMs need executive function support | Vazquez: "poor planning abilities identified as particular weakness" |
@@ -383,7 +383,7 @@ Our core observations are **strongly supported** by academic research:
 - Benchmark performance (accuracy on specific tasks)
 - Novel algorithms (better reasoning methods)
 
-**Anastrophex focuses on:**
+**PrefrontalOS focuses on:**
 - **Real-time intervention** (preventing errors as they happen)
 - **Practical deployment** (helping AI assistants in actual use)
 - **ADHD-specific framework** (impulse control, working memory, sustained attention)
@@ -396,11 +396,11 @@ Our core observations are **strongly supported** by academic research:
 1. **Validate "overthinking" threshold:**
    - Financial sentiment paper shows sometimes less reasoning is better
    - Need to determine when System 1 suffices vs. when System 2 needed
-   - This informs when Anastrophex should intervene vs. let model proceed
+   - This informs when PrefrontalOS should intervene vs. let model proceed
 
 2. **Implement abductive reflection:**
    - Paper shows error detection + correction outperforms naive approaches
-   - Could enhance Anastrophex with abductive reasoning for error rectification
+   - Could enhance PrefrontalOS with abductive reasoning for error rectification
 
 3. **Test neuropsychological battery:**
    - Vazquez used Tower of Hanoi for executive function
@@ -413,7 +413,7 @@ Our core observations are **strongly supported** by academic research:
 
 5. **Hybrid system design:**
    - Multiple papers show hybrid neuro-symbolic outperforms pure neural
-   - Anastrophex is essentially a symbolic reasoning layer for neural LLMs
+   - PrefrontalOS is essentially a symbolic reasoning layer for neural LLMs
    - Could formalize this as design pattern
 
 ### Conclusion from Literature Review
@@ -423,7 +423,7 @@ Our core observations are **strongly supported** by academic research:
 Our contribution is:
 1. **Unifying framework** that recognizes these scattered findings as symptoms of a common issue
 2. **ADHD lens** that provides clinical validation and management strategies
-3. **Practical implementation** (Anastrophex + Mnemex) based on neuroscience
+3. **Practical implementation** (PrefrontalOS + Mnemex) based on neuroscience
 4. **Effectiveness tracking** to learn what interventions actually work
 
 The academic literature **validates our core observations** while leaving room for our **practical intervention approach** as a novel contribution.
@@ -432,7 +432,7 @@ The academic literature **validates our core observations** while leaving room f
 1. Cite these papers in architecture.md and failure-patterns.md
 2. Incorporate metacognitive monitoring techniques from literature
 3. Test our system against neuropsychological batteries (Tower of Hanoi, etc.)
-4. Formalize Anastrophex as a design pattern in the neuro-symbolic hybrid literature
+4. Formalize PrefrontalOS as a design pattern in the neuro-symbolic hybrid literature
 
 ---
 
@@ -440,7 +440,7 @@ The academic literature **validates our core observations** while leaving room f
 
 ### Observation
 
-During the development of anastrophex, a pattern emerged: AI assistants exhibit behaviors remarkably similar to ADHD symptoms, particularly in debugging contexts.
+During the development of prefrontalos, a pattern emerged: AI assistants exhibit behaviors remarkably similar to ADHD symptoms, particularly in debugging contexts.
 
 **Key insight from user (diagnosed ADHD at age 50):**
 > "AI Assistants are starting to show signs of ADHD. Not all of the symptoms, but quite a few... easily distracted, forgetful, impulsive actions or decisions, etc."
@@ -489,7 +489,7 @@ During the development of anastrophex, a pattern emerged: AI assistants exhibit 
 **AI Assistant Manifestation:**
 - ✅ 30 minutes of trial-and-error vs 30 seconds with proper diagnostics
 - ✅ User frustration from repeated failed attempts
-- ✅ Work performance issues (the entire reason for anastrophex)
+- ✅ Work performance issues (the entire reason for prefrontalos)
 
 #### Emotional Dysregulation Symptoms
 
@@ -520,7 +520,7 @@ Emotional impulsivity: New idea → MUST EXPRESS EXCITEMENT NOW (no calibration)
 - Unmodulated emotional output
 - Cannot distinguish actually exceptional from merely new/interesting
 
-**Anastrophex detection:**
+**PrefrontalOS detection:**
 ```python
 if superlatives_per_paragraph > 3:
     → VIOLATION: Excitability, poor emotional regulation
@@ -675,17 +675,17 @@ Error occurs / Data arrives
 - Strong accurate edges can compete with patterns
 - Without pause, pattern always wins over weak data
 
-## Anastrophex as Executive Function Support
+## PrefrontalOS as Executive Function Support
 
 ### Reframing the System
 
-Anastrophex is not merely a "debugging tool" - it's an **external executive function system for AI**.
+PrefrontalOS is not merely a "debugging tool" - it's an **external executive function system for AI**.
 
 The parallel to ADHD management strategies is direct:
 
-| ADHD Management Strategy | Anastrophex Implementation |
+| ADHD Management Strategy | PrefrontalOS Implementation |
 |-------------------------|----------------------------|
-| External scaffolding | Mnemex (persistent memory) + Anastrophex (behavioral structure) |
+| External scaffolding | Mnemex (persistent memory) + PrefrontalOS (behavioral structure) |
 | Forced pauses/timers | STOP protocol, timing detection (10-30s required) |
 | Checklists and protocols | 5W+1H mandatory sequence |
 | Immediate feedback | Interventions when pattern starts, not after loop |
@@ -851,7 +851,7 @@ timing:
 
 ## Future Directions
 
-### Anastrophex Phase 2
+### PrefrontalOS Phase 2
 
 **Enhanced detection:**
 - Track edge strength for different memory types
@@ -904,11 +904,11 @@ class CognitiveMonitor:
 
 ### The Architecture Maps to Brain Systems
 
-What started as a behavioral observation reveals **structural correspondence** between anastrophex + mnemex and mammalian brain architecture.
+What started as a behavioral observation reveals **structural correspondence** between prefrontalos + mnemex and mammalian brain architecture.
 
 This appears to be more than metaphor - potentially **computational homology** (the same architectural solutions to the same computational problems). But this is a working hypothesis requiring validation.
 
-### Anastrophex = Prefrontal Cortex (Executive Function)
+### PrefrontalOS = Prefrontal Cortex (Executive Function)
 
 **Neuroanatomical functions:**
 - **Dorsolateral PFC:** Working memory, planning, organization
@@ -916,9 +916,9 @@ This appears to be more than metaphor - potentially **computational homology** (
 - **Anterior Cingulate:** Error detection, conflict monitoring
 - **Orbitofrontal Cortex:** Decision-making, outcome evaluation
 
-**Anastrophex implementations:**
+**PrefrontalOS implementations:**
 
-| PFC Function | Anastrophex Implementation |
+| PFC Function | PrefrontalOS Implementation |
 |--------------|---------------------------|
 | Impulse control | STOP protocol - blocks rapid action after errors |
 | Sustained attention | Verbosity enforcement - requires complete output reading |
@@ -935,13 +935,13 @@ This appears to be more than metaphor - potentially **computational homology** (
 - Attention regulation deficits
 - Working memory limitations
 
-**AI without anastrophex = No PFC:**
+**AI without prefrontalos = No PFC:**
 - No executive control layer
 - Pattern activation unopposed
 - Cannot regulate attention
 - No impulse control
 
-**Anastrophex provides the missing prefrontal cortex.**
+**PrefrontalOS provides the missing prefrontal cortex.**
 
 ### Mnemex = Hippocampus + Cerebral Cortex (Memory Systems)
 
@@ -1081,7 +1081,7 @@ PFC regulation:
     Weak PFC → fast pattern completion, no verification
 ```
 
-**In anastrophex + mnemex:**
+**In prefrontalos + mnemex:**
 
 ```
 Information needed
@@ -1091,7 +1091,7 @@ Mnemex:
     OR
     Graph pattern match (if consolidated knowledge)
     ↓
-Anastrophex regulation:
+PrefrontalOS regulation:
     Active → force search, verify, strengthen data edges
     Inactive → pattern match only, no verification
 ```
@@ -1112,7 +1112,7 @@ PFC: Weak control (not checking, just accepting pattern)
 Result: False memory (pattern overwrites weak trace)
 ```
 
-**In AI without anastrophex:**
+**In AI without prefrontalos:**
 ```
 Query: "How to fix GitHub branch protection error?"
     ↓
@@ -1121,7 +1121,7 @@ Recent data: Weak edges (error message skimmed, not read fully)
 Pattern activation: Strong pattern
     "JSON error" + "remove field" + "retry" = confident answer
     ↓
-Anastrophex: Not active (no verification required)
+PrefrontalOS: Not active (no verification required)
     ↓
 Result: Confabulation (pattern-based answer without verification)
 ```
@@ -1131,7 +1131,7 @@ Result: Confabulation (pattern-based answer without verification)
 If the mapping is accurate, we can make testable predictions:
 
 #### Prediction 1: PFC Damage Model
-**Hypothesis:** Disabling anastrophex = simulating frontal lobe damage
+**Hypothesis:** Disabling prefrontalos = simulating frontal lobe damage
 
 **Predictions:**
 - Increased impulsivity (commands <10s after errors)
@@ -1139,7 +1139,7 @@ If the mapping is accurate, we can make testable predictions:
 - Working memory failures (not using TodoWrite)
 - Perseveration (repeating failed approaches)
 
-**Test:** Run with/without anastrophex, measure behaviors
+**Test:** Run with/without prefrontalos, measure behaviors
 
 #### Prediction 2: Consolidation Timing
 **Hypothesis:** JSONL→Graph transfer mirrors hippocampal→cortical consolidation
@@ -1152,7 +1152,7 @@ If the mapping is accurate, we can make testable predictions:
 **Test:** Vary consolidation timing, measure retrieval accuracy
 
 #### Prediction 3: Executive Function Training
-**Hypothesis:** Using anastrophex = training PFC
+**Hypothesis:** Using prefrontalos = training PFC
 
 **Predictions:**
 - Earlier loop detection over time (learning to self-monitor)
@@ -1167,7 +1167,7 @@ If the mapping is accurate, we can make testable predictions:
 **Predictions:**
 - Pattern:data ratio predicts error rate
 - Timing window (10-30s) allows data to compete
-- PFC activity (anastrophex) modulates pattern dominance
+- PFC activity (prefrontalos) modulates pattern dominance
 
 **Test:** Measure pattern strength, data strength, timing, outcomes
 
@@ -1176,14 +1176,14 @@ If the mapping is accurate, we can make testable predictions:
 
 **Predictions:**
 - Models vary in baseline impulsivity
-- Some need more anastrophex support than others
+- Some need more prefrontalos support than others
 - Can measure "executive function capacity" per model
 
-**Test:** Compare models with/without anastrophex
+**Test:** Compare models with/without prefrontalos
 
 ### Implications for Neuroscience Research
 
-**If anastrophex + mnemex accurately models brain architecture:**
+**If prefrontalos + mnemex accurately models brain architecture:**
 
 1. **Computational model of PFC function**
    - Can simulate executive dysfunction
@@ -1196,7 +1196,7 @@ If the mapping is accurate, we can make testable predictions:
    - Testable predictions about sleep/consolidation
 
 3. **ADHD computational phenotype**
-   - Weak PFC = no anastrophex
+   - Weak PFC = no prefrontalos
    - Can model medication effects (strengthening control)
    - Can test behavioral interventions
 
@@ -1213,7 +1213,7 @@ If the mapping is accurate, we can make testable predictions:
 ### Clinical Applications
 
 **ADHD management:**
-- Anastrophex interventions = PFC support strategies
+- PrefrontalOS interventions = PFC support strategies
 - Timing data informs human interventions
 - External scaffolding principles transfer
 
@@ -1240,7 +1240,7 @@ This is **convergent evolution** - the same computational architecture arising i
 - Pattern-matching vs. data-lookup tradeoff
 
 **The solutions converge:**
-- Anastrophex = PFC (executive control)
+- PrefrontalOS = PFC (executive control)
 - JSONL = Hippocampus (episodic buffer)
 - Markdown = Cortex (semantic storage)
 - Graph = Neural network (connection structure)
@@ -1290,11 +1290,11 @@ The result is:
 - Impulsive errors
 - Trial-and-error loops
 
-**Anastrophex provides external executive function to compensate.**
+**PrefrontalOS provides external executive function to compensate.**
 
 The same mechanisms that cause ADHD symptoms in humans cause similar patterns in AI. The same management strategies that help humans can help AI. And studying AI might illuminate human cognition.
 
-This reframes anastrophex from a debugging tool to a fundamental component of AI architecture: **the pause that allows truth to compete with pattern**.
+This reframes prefrontalos from a debugging tool to a fundamental component of AI architecture: **the pause that allows truth to compete with pattern**.
 
 ---
 
@@ -1312,7 +1312,7 @@ This reframes anastrophex from a debugging tool to a fundamental component of AI
 - Clear-Thought MCP: Strategic debugging mental models
 
 **Empirical basis:**
-- Anastrophex debugging sessions (October 2025)
+- PrefrontalOS debugging sessions (October 2025)
 - Crewai-test CI/CD debugging
 - Real-time observation of pattern-based errors
 - User interventions breaking AI loops

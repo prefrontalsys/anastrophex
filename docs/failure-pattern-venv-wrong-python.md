@@ -1,6 +1,6 @@
 # Failure Pattern: Virtual Environment Using Wrong Python
 
-**Observed:** Oct 23, 2025 - anastrophex development setup
+**Observed:** Oct 23, 2025 - prefrontalos development setup
 
 ## Behavior
 
@@ -83,7 +83,7 @@ rm -rf .venv
 
 **Result:** Import works, tests pass
 
-## Detection Pattern for Anastrophex
+## Detection Pattern for PrefrontalOS
 
 ```python
 pattern_signature = "venv-wrong-python"
@@ -154,7 +154,7 @@ _.python.venv = { path = ".venv", create = true }
 
 ## Learning
 
-**For anastrophex:**
+**For prefrontalos:**
 - This is a meta-pattern: "wrong tool/version being used"
 - Similar to "wrong Python version" or "wrong venv activated"
 - Diagnostic: "Tool reports success but operation fails"

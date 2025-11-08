@@ -189,7 +189,7 @@ The rhythm change is a **forcing function** that prevents:
 
 ### Phase 6: Documentation Update (120+ min)
 
-**Updated:** `/Users/sc/Documents/GitHub/anastrophex/docs/debugging-principles.md`
+**Updated:** `/Users/sc/Documents/GitHub/prefrontalos/docs/debugging-principles.md`
 
 **Added Section:** "Execution Tempo and Rhythm" (134 lines)
 
@@ -263,10 +263,10 @@ The rhythm change is a **forcing function** that prevents:
 1. `/Users/sc/Documents/GitHub/mnemex/src/mnemex/security/validators.py` (+120 lines)
 2. `/Users/sc/Documents/GitHub/mnemex/tests/test_security_validators.py` (+150 lines)
 
-### Anastrophex Protocol Refinement
+### PrefrontalOS Protocol Refinement
 
 **Documentation Enhanced:**
-- `/Users/sc/Documents/GitHub/anastrophex/docs/debugging-principles.md` (+134 lines)
+- `/Users/sc/Documents/GitHub/prefrontalos/docs/debugging-principles.md` (+134 lines)
 
 **New Section:** "Execution Tempo and Rhythm"
 
@@ -282,14 +282,14 @@ Transformed STOPPER from abstract checklist to behaviorally observable disciplin
 **New Memories (3):**
 1. **0814c1f0** - Fixed mnemex tag/entity validation (technical details)
 2. **1b134d27** - STOPPER Protocol Refinement: Tempo and Rhythm Change
-3. **50351826** - Anastrophex Documentation Updated: STOPPER Tempo Section
+3. **50351826** - PrefrontalOS Documentation Updated: STOPPER Tempo Section
 
 **Memories Reinforced (20):**
 All STOPPER-related memories touched and boosted from 0.00→1.10 or 1.10→1.82:
 - acac435c - STOPPER Protocol multi-trigger definition
 - 23664230 - STOPPER convergence with DBT STOP
 - 58184554 - STOPPER broader definition & implementation
-- 7fe3cf40 - magg-anastrophex three-layer architecture
+- 7fe3cf40 - magg-prefrontalos three-layer architecture
 - b3d41021 - Effective intervention design principle
 - 69e5c459 - DBT/CBT techniques adapted for AI
 - afc7bfb3 - Convergent discovery validation
@@ -303,7 +303,7 @@ All STOPPER-related memories touched and boosted from 0.00→1.10 or 1.10→1.82
 - 689d3885 - Case study positive example
 - fd6cc821 - Debugging protocol for all projects
 - 0fa171fc - Documentation style policy
-- d1e40570 - Anastrophex four-phase intervention
+- d1e40570 - PrefrontalOS four-phase intervention
 
 **Memory Retention Strategy:**
 All reinforced memories now have elevated scores ensuring retention across sessions. The tempo/rhythm insight is preserved in multiple forms (memory, documentation, examples).
@@ -390,7 +390,7 @@ Run ONE test → verify → run NEXT test → verify
    - Added TestValidateEntityWithSanitization class (4 tests)
    - Updated 9 existing tests for new auto-sanitize behavior
 
-### Anastrophex Repository
+### PrefrontalOS Repository
 
 3. **docs/debugging-principles.md** (+134 lines)
    - Added "Execution Tempo and Rhythm" section
@@ -416,7 +416,7 @@ Run ONE test → verify → run NEXT test → verify
 
 ### Immediate (Do Today)
 
-1. ✅ **DONE:** Update anastrophex debugging-principles.md with tempo/rhythm section
+1. ✅ **DONE:** Update prefrontalos debugging-principles.md with tempo/rhythm section
 2. ✅ **DONE:** Reinforce all related mnemex memories
 3. ✅ **DONE:** Create comprehensive session summary
 4. ⏭️ **NEXT:** User to create unifying chat bringing ideas together
@@ -430,14 +430,14 @@ Run ONE test → verify → run NEXT test → verify
 
 ### Medium Term (This Month)
 
-1. Review all case studies in anastrophex/examples for STOPPER adherence quality
+1. Review all case studies in prefrontalos/examples for STOPPER adherence quality
 2. Create automated detection for STOPPER tempo violations
 3. Add tempo/rhythm concept to compressed STOPPER formats
 4. Consider adding "tempo change" to STOPPER acronym documentation
 
 ### Long Term (Next Quarter)
 
-1. Build infrastructure-level STOPPER enforcement (magg-anastrophex project)
+1. Build infrastructure-level STOPPER enforcement (magg-prefrontalos project)
 2. Create metrics for measuring tempo adherence
 3. Develop training materials for teaching tempo-aware STOPPER
 4. Research whether tempo change applies to other cognitive interventions
@@ -470,7 +470,7 @@ Run ONE test → verify → run NEXT test → verify
 ### Knowledge Preservation: 10/10
 - ✅ 3 new mnemex memories created
 - ✅ 20 related memories reinforced
-- ✅ Comprehensive documentation in anastrophex
+- ✅ Comprehensive documentation in prefrontalos
 - ✅ Real example for future reference
 - ✅ Session summary for continuity
 
@@ -501,7 +501,7 @@ You can literally SEE when someone enters STOPPER mode by watching their executi
 **End Time:** ~19:00
 **Duration:** ~2 hours
 **Working Directory:** `/Users/sc/Documents/GitHub/llmlingua-mcp`
-**Additional Directories:** `/Users/sc/Documents/GitHub/mnemex`, `/Users/sc/Documents/GitHub/anastrophex`
+**Additional Directories:** `/Users/sc/Documents/GitHub/mnemex`, `/Users/sc/Documents/GitHub/prefrontalos`
 
 **User:** sc
 **Assistant:** Claude (Sonnet 4.5)
@@ -519,7 +519,7 @@ You can literally SEE when someone enters STOPPER mode by watching their executi
 
 **Repositories Modified:**
 1. mnemex (bug fix + tests)
-2. anastrophex (documentation enhancement)
+2. prefrontalos (documentation enhancement)
 
 **Key User Quotes:**
 - "you should have stopped to diagnose after the first"

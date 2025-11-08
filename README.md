@@ -1,4 +1,4 @@
-# Anastrophex
+# PrefrontalOS
 
 > **Anastrophe** (ἀναστροφή) = conduct, behavior in ancient Greek
 > Following the mnemex naming convention: memory + codex → conduct + codex
@@ -81,17 +81,17 @@ cd behavior-mcp
 uv pip install -e ".[dev]"
 
 # Run the server
-anastrophex
+prefrontalos
 
 # Or using Python module
-python -m anastrophex.server
+python -m prefrontalos.server
 ```
 
 ## Development
 
 **Status:** Planning/Design Phase
-**Package name:** `anastrophex`
-**Entry point:** `anastrophex` command
+**Package name:** `prefrontalos`
+**Entry point:** `prefrontalos` command
 
 See [ROADMAP.md](ROADMAP.md) for detailed implementation plan.
 
